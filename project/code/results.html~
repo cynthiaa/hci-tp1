@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Despejar.com El mejor precio para tu viaje</title>
-    <link href="sample.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="style/style.css" media="screen" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 		<div id="wrap" >
@@ -49,7 +49,7 @@
 						Calendarios:<br>
 						</br>
 						Opciones avanzadas >>
-						<input type="submit" value="Buscar vuelos">
+						<a class="button" href="search.html">Buscar vuelos</a>
                     </form>
                 </div>
                 <div id="main">
