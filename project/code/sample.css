@@ -1,5 +1,9 @@
 /* specific divs */
 
+body {
+	background-color: #FAD6F7;	
+	}
+
 p {
 	width:auto;
 	outline: 1px solid black;
