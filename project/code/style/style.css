@@ -1,0 +1,108 @@
+/* specific divs */
+
+body {
+	background-color: #E8F2F6;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	}
+
+p {
+	width:auto;
+	outline: 1px solid black;
+	}
+
+.result {
+	height: 150px;
+	border-radius:5px;
+	border-style: groove;
+	margin: 0 25px;
+	}
+
+#header {
+	height:35px;
+	background-color: #07B9FF;
+	padding: 0 5px 0 5px;
+	text-align:right;
+	margin: 0;
+	}
+
+#container {
+	border-radius:15px;
+	border-style: groove;
+	margin: 50px 0 0 300px;
+	width: 640px;
+	height: 480px;
+	padding:15px 0 0 0;
+	}
+
+#content {
+	width:100%;
+	height:90%;
+	position: relative;
+	margin: 0;
+	}
+
+#results {
+	width:80%;
+	height:100%;
+	background: #0099f7 url(../images/top_gradient.png) repeat-x 0 bottom;
+	float:right;
+	margin: 0; 
+	}
+
+#left {
+	margin: 0;
+	width: 20%;
+	height:100%;
+	background-color: yellow;
+	float:left;
+	}
+
+#search {
+	margin: 3px;
+	padding : 3px;
+	background-color: red;
+	}
+
+
+#logo {
+	background-color: blue;
+	margin: 0;
+	}
+
+#footer {
+	margin: 0;
+	clear: both;
+	}
+	
+#sidebar {
+	text-align: center;
+	margin: 20px;
+	padding: 10px;
+	background-color: #B9EAFD;
+	border-radius: 10px;
+	border-style: groove;
+	}
+	
+.button {
+	padding: 4px;
+	background-color: #E6E6E6;
+	color: #666666;
+	border-style: groove;
+	border-radius: 7px;
+	text-decoration: none; 
+    }
+    
+.button:link,
+.button:visited {
+	border-top: 1px solid #E6E6E6;
+	border-bottom: 2px solid #666666;
+	border-left: 1px solid #E6E6E6;
+	border-right: 2px solid #666666;
+	}
+	
+.enlaceboton:hover {
+	border-bottom: 1px solid #E6E6E6;
+	border-top: 2px solid #E6E6E6;
+	border-right: 1px solid #E6E6E6;
+	border-left: 2px solid #666666;
+	}
