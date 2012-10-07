@@ -4,27 +4,29 @@
 <head>
     <meta charset="utf-8" />
     <title>Despejar.com El mejor precio para tu viaje</title>
-    <link href="sample.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="style/style.css" media="screen" rel="stylesheet" type="text/css"/>
 </head>
 <body>
         <div id="wrap" >
-            <div id="lang_bar">
-                <SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('En construcción');"> 
-                    <OPTION VALUE="link pagina 1">Español</OPTION>
-                    <OPTION VALUE="link pagina 2">English</OPTION> 
-                </SELECT> 
+            <div id="header">
+					<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
+                    <option value="link pagina 1">Español</option>>
+                    <option value="link pagina 2">Inglés</option> 
+               </select>
             </div>
+       </div>
             <div id="container">
                 <div id="header" >
                     <h1>Despejar.com</h1>
                 </div>
                 <div id="sidebar">
-					<h3>Busqueda de vuelos</h3>
+					<h3>Búsqueda de vuelos</h3>
                     <form>
 						Origen: <input type="text" value="Lugar o aeropuerto de origen" name="origin"><br>
 						Destino: <input type="text" value="Lugar o aeropuerto de destino" name="destination"><br>
 						Partida: <input type="text" value="Fecha de partida" name="departure"><br>
 						Destino: <input type="text" value="Opcional si es solo de ida" name="return"><br>
+						</br>
 						Adultos:
 						<select name="adults_num">
 							<option value="1adults" selected="selected">1</option>
@@ -43,9 +45,11 @@
 							<option value="2infants">2</option>
 							<option value="3infants">3</option>
 						</select><br>
-						Calendars:<br>
+						</br>
+						Calendarios:<br>
+						</br>
 						Opciones avanzadas >>
-						<input type="submit" value="Buscar vuelos">
+						<a class="button" href="http://www.google.com.ar">Buscar vuelos</a>
                     </form>
                 </div>
 				<div id="promociones">
@@ -53,7 +57,7 @@
 					-
 				</div>
                 <div id="footer">
-                    <h5>Despejar.com© casi todos los derechos reservados</h5>
+                    <h5>Despejar.com© Casi todos los derechos reservados</h5>
                 </div>
             </div>
         </div>
