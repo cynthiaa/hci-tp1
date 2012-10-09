@@ -2,9 +2,18 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
     <meta charset="utf-8" />
+
     <title>Despejar.com El mejor precio para tu viaje</title>
+
     <link href="style/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="calendar/css/calendar.css" rel="stylesheet" type="text/css"/>
+    
+    <script src="calendar/js/calendar.js" type="text/javascript"/></script>
+    <script src="calendar/js/calendar_es.js" type="text/javascript"/></script>
+    <script src="calendar/js/calendar_setup.js" type="text/javascript"/></script>
+
 </head>
 <body>
         <div id="wrap" >
@@ -44,10 +53,22 @@
 							<option value="1infants" selected="selected">1</option>
 							<option value="2infants">2</option>
 							<option value="3infants">3</option>
-						</select><br>
+						</select>
 						<br>
-						Calendarios:<br>
-						-<br>
+						<h4>Calendario:</h4>
+						<div class="calendar">
+							<input type="text" name="ingreso" id="ingreso" value="dd-mm-yyyy" />
+							<img src="calendar/imagen/calendar.png" width="16" height="16" border="0" title="Fecha Inicial" id="lanzador">
+							<!-- Script que define el calendar--> 
+							<script type="text/javascript"> 
+   							Calendar.setup({ 
+    							inputField: "ingreso",	// ID del campo de txt 
+     							ifFormat: "%d-%m-%Y",	// Formato de la fecha 
+     							button: "lanzador"	// ID del botoncito 
+								}); 
+							</script>
+						</div>		
+						
 						<br>
 						<a class="button blue" onClick="javascript:alert('Aún no disponible');">Busqueda avanzada</a>
 						<a class="button blue" href="results.html">Buscar vuelos</a>
