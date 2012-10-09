@@ -4,18 +4,16 @@ body {
 	background-color: #E8F2F6;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	}
+table
+{
+border-collapse:collapse;
+}
 
-p {
-	width:auto;
-	outline: 1px solid black;
-	}
+table, td, th
+{
+border:0px solid black;
+}
 
-.result {
-	height: 150px;
-	border-radius:5px;
-	border-style: groove;
-	margin: 0 25px;
-	}
 /* Language bar */
 #header {
 	height:35px;
@@ -31,11 +29,23 @@ p {
 	
 /* Footer style */
 #footer {
+	clear:both;
 	text-align: center;
 	clear: both;
 	color: #667486;
 	}
-	
+
+/* Posicionamiento de cajas  particulares*/
+#search {
+	width: 200px;
+	float:left;
+}
+
+#main{
+	width: 400px;
+	float: right;
+}
+
 /* Caja contenedor */
 #container {
 	margin-left: auto ;
@@ -54,11 +64,29 @@ p {
 	background-color: #B9EAFD;
 	border-radius: 10px;
 }
-	
+
 .inner_box  h3{
 	color: #0095cd;
 }
 
+/* caja de resultados */
+#price{
+	float: left;
+	width: 100px;
+}
+
+.table_data{
+	text-align: left;
+	font-size: 12px;
+	float: right;
+	width: 300px;
+}
+
+.table_data td
+{
+text-align:center;
+}
+	
 /* Botones */
 .button {
 	display: inline-block;

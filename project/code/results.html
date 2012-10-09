@@ -11,66 +11,64 @@
             <div id="header">
 					<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
                     <option value="link pagina 1">Español</option>>
-                    <option value="link pagina 2">Inglés</option> 
+                    <option value="link pagina 2">English</option> 
                </select>
             </div>
-       </div>
             <div id="container">
-                <div id="header" >
+                <div id="logo" >
                     <h1>Despejar.com</h1>
                 </div>
-                <div id="sidebar">
-					<h3>Búsqueda de vuelos</h3>
+                <div id="search" class="inner_box">
+                    <h3>Búsqueda de vuelos</h3>
                     <form>
-						Origen: <input type="text" placeholder="Lugar o aeropuerto de origen" name="origin"><br>
-						Destino: <input type="text" palceholder="Lugar o aeropuerto de destino" name="destination"><br>
-						Partida: <input type="text" placeholder="Fecha de partida" name="departure"><br>
-						Destino: <input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
-						</br>						
-						Adultos:
+						Origen:<br> <input type="text" placeholder="Lugar o aeropuerto de origen" name="origin"><br>
+						Destino:<br> <input type="text" placeholder="Lugar o aeropuerto de destino" name="destination"><br>
+						Partida:<br> <input type="text" placeholder="Fecha de partida" name="departure"><br>
+						Destino:<br> <input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
+						<br>
+						Adultos:<br>
 						<select name="adults_num">
 							<option value="1adults" selected="selected">1</option>
 							<option value="2adults">2</option>
 							<option value="3adults">3</option>
 						</select>
-						Niños:
+						<br>Niños:<br>
 						<select name="kids_num">
 							<option value="1kids" selected="selected">1</option>
 							<option value="2kids">2</option>
 							<option value="3kids">3</option>
 						</select>
-						Infantes:
+						<br>Infantes:<br>
 						<select name="infants_num">
 							<option value="1infants" selected="selected">1</option>
 							<option value="2infants">2</option>
 							<option value="3infants">3</option>
 						</select><br>
-						</br>
-						Calendarios:<br>
-						</br>
-						Opciones avanzadas >>
-						<a class="button" href="search.html">Buscar vuelos</a>
+						<br>
+						<a class="button blue" href="results.html">Buscar vuelos</a>
                     </form>
                 </div>
-                <div id="main">
-                    <div class="result">
-						<h3>Información del vuelo</h3>
-                        <div class="price">
+				<div id="main">
+					<div id="result" class="inner_box">	
+						<h3>Información del vuelo</h3>					
+                        <div id="price">
 							Costo: 50$<br>
-							Ver detalles
+							Ver detalles<br>
+							<br>
+							<a class="button blue" href="buy.html">Comprar</a>
 						</div>
-                        <div class="departure_table">
-							Origen: BUE<br>
-							Destino: URU<br>
-							Fecha: 12/10/2012<br>
+                        <div class="table_data">
+							Origen: BUE 
+							Destino: URU 
+							Fecha: 12/10/2012 
 							<table border="1">
 								<tr>
-									<td>Salida</td>
-									<td>Llegada</td>
-									<td>Duración</td>
-									<td>Escalas</td>
-									<td>Aerolinea</td>
-									<td>Calificación</td>
+									<th>Salida</th>
+									<th>Llegada</th>
+									<th>Duración</th>
+									<th>Escalas</th>
+									<th>Aerolinea</th>
+									<th>Calificación</th>
 								</tr>
 								<tr>
 									<td>12/10/2012</td>
@@ -82,19 +80,17 @@
 										Leer comentarios
 								</tr>
 							</table>
-						</div>
-						<div class="return_table">
-							Origen: URU<br>
-							Destino: BUE<br>
-							Fecha: 13/10/2012<br>
+							Origen: URU 
+							Destino: BUE 
+							Fecha: 13/10/2012 
 							<table border="1">
 								<tr>
-									<td>Salida</td>
-									<td>Llegada</td>
-									<td>Duración</td>
-									<td>Escalas</td>
-									<td>Aerolinea</td>
-									<td>Calificación</td>
+									<th>Salida</th>
+									<th>Llegada</th>
+									<th>Duración</th>
+									<th>Escalas</th>
+									<th>Aerolinea</th>
+									<th>Calificación</th>
 								</tr>
 								<tr>
 									<td>13/10/2012</td>
@@ -108,12 +104,11 @@
 								</tr>
 							</table>
 						</div>
-                    </div>
-                </div>
-                <div id="footer">
+					</div>
+            </div>
+			<div id="footer">
                     <h5>Despejar.com© Casi todos los derechos reservados</h5>
                 </div>
-            </div>
         </div>
 </body>
 </html>
