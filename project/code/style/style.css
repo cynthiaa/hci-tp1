@@ -25,7 +25,7 @@ p {
 
 /* Logo */
 #logo{
-	background-image: url(../images/logo.jpeg);
+	color: #4c4c4c;
 	text-align: center;
 	}
 	
@@ -56,7 +56,7 @@ p {
 }
 	
 .inner_box  h3{
-	color: #54657A;
+	color: #0095cd;
 }
 
 /* Botones */
