@@ -40,7 +40,7 @@ h3{
 
 /* Logo */
 #logo{
-margin: -60px 0px 0px 0px;
+	margin: -60px 0px 0px 0px;
 	color: #667486;
 	text-align: center;
 }
@@ -65,6 +65,31 @@ margin: -60px 0px 0px 0px;
 	overflow: auto;
 }
 
+/* pagina principal */
+#left_search{
+	float:right;
+}
+
+#picture { 
+	border-radius: 15px;
+	float:right;
+	margin: 0px 0px 0px 20px;
+	position: relative; 
+}
+
+h2 { 
+   position: absolute; 
+   top: 300px; 
+   left: 0; 
+}
+
+h2 span { 
+   color: white; 
+   font: bold 24px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
 /* Posicionamiento de cajas  particulares*/
 #search {
 	width: 180px;
@@ -91,6 +116,10 @@ margin: -60px 0px 0px 0px;
 
 /* contenedor de caja de resultados */
 #result{
+	overflow: auto;
+}
+
+#fix{
 	overflow: auto;
 }
 
