@@ -24,18 +24,20 @@
                </select>
             </div>
        </div>
-            <div id="container">
-                <div id="logo" >
-                    <h1>Despejar.com</h1>
-                </div>
-                <div class="inner_box">
+	   <div id="logo" >
+            <h1>Despejar.com</h1>
+        </div>
+        <div id="container">
+			<div class="inner_box">
 					<h3>Búsqueda de vuelos</h3>
                     <form>
+						<p>
 						Origen: <input type="text" placeholder="Lugar o aeropuerto de origen" name="origin"><br>
 						Destino: <input type="text" placeholder="Lugar o aeropuerto de destino" name="destination"><br>
 						Partida: <input type="text" placeholder="Fecha de partida" name="departure"><br>
 						Destino: <input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
-						<br>
+						</p>
+						<p>
 						Adultos:
 						<select name="adults_num">
 							<option value="1adults" selected="selected">1</option>
@@ -54,8 +56,9 @@
 							<option value="2infants">2</option>
 							<option value="3infants">3</option>
 						</select>
-						<br>
-						<h4>Calendario:</h4>
+						</p>
+						<h3>Calendario</h3>
+						<p>
 						<div class="calendar">
 							<input type="text" name="ingreso" id="ingreso" value="dd-mm-yyyy" />
 							<img src="calendar/imagen/calendar.png" width="16" height="16" border="0" title="Fecha Inicial" id="lanzador">
@@ -67,18 +70,16 @@
      							button: "lanzador"	// ID del botoncito 
 								}); 
 							</script>
-						</div>		
-						
-						<br>
-						<a class="button blue" onClick="javascript:alert('Aún no disponible');">Busqueda avanzada</a>
-						<a class="button blue" href="results.html">Buscar vuelos</a>
+						</div>						
+						</p>
+						<a class="button" onClick="javascript:alert('Aún no disponible');">Busqueda avanzada</a>
+						<a class="button" href="results.html">Buscar vuelos</a>
                     </form>
                 </div>
 				<br>
 				<div class="inner_box">
 					<h3>Promociones (google maps)</h3>
 					-
-					<br>
 				</div>
             </div>
 			<div id="footer">

@@ -9,23 +9,22 @@
 <body>
 		<div id="wrap" >
             <div id="header">
-					<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
+					<select name="selCombo" onChange="javascript:alert('Aún no disponible');"> 
                     <option value="link pagina 1">Español</option>>
                     <option value="link pagina 2">English</option> 
                </select>
             </div>
+            <div id="logo" >
+                <h1>Despejar.com</h1>
+            </div>
             <div id="container">
-                <div id="logo" >
-                    <h1>Despejar.com</h1>
-                </div>
                 <div id="search" class="inner_box">
                     <h3>Búsqueda de vuelos</h3>
                     <form>
-						Origen:<br> <input type="text" placeholder="Lugar o aeropuerto de origen" name="origin"><br>
-						Destino:<br> <input type="text" placeholder="Lugar o aeropuerto de destino" name="destination"><br>
-						Partida:<br> <input type="text" placeholder="Fecha de partida" name="departure"><br>
-						Destino:<br> <input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
-						<br>
+						Origen:<br><input type="text" placeholder="Lugar o aeropuerto de origen" name="origin"><br>
+						Destino:<br><input type="text" placeholder="Lugar o aeropuerto de destino" name="destination"><br>
+						Partida:<br><input type="text" placeholder="Fecha de partida" name="departure"><br>
+						Destino:<br><input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
 						Adultos:<br>
 						<select name="adults_num">
 							<option value="1adults" selected="selected">1</option>
@@ -45,23 +44,27 @@
 							<option value="3infants">3</option>
 						</select><br>
 						<br>
-						<a class="button blue" href="results.html">Buscar vuelos</a>
+						<a class="button" href="results.html">Buscar vuelos</a><br>
                     </form>
                 </div>
 				<div id="main">
 					<div id="result" class="inner_box">	
-						<h3>Información del vuelo</h3>					
-                        <div id="price">
-							Costo: 50$<br>
-							Ver detalles<br>
-							<br>
-							<a class="button blue" href="buy.html">Comprar</a>
+						<div id="price">
+							<p>
+							<b>Costo: 50$</b><br>
+							<a href="detalles.html">(Ver detalles)</a><br>
+							</p>
+							<p>
+							<a class="button" href="buy.html">Comprar</a></p>
 						</div>
-                        <div class="table_data">
+						<div id="flight_info">
+						<p>
+							<h3>	
 							Origen: BUE 
 							Destino: URU 
-							Fecha: 12/10/2012 
-							<table border="1">
+							Fecha: 12/10/2012 	
+							</h3>
+							<table>
 								<tr>
 									<th>Salida</th>
 									<th>Llegada</th>
@@ -77,13 +80,17 @@
 									<td>COR, ARG</td>
 									<td>Lapa</td>
 									<td>*****<br>
-										Leer comentarios
+										<a href="comments.html">(Ver comentarios)</a>
 								</tr>
 							</table>
+							</p>
+							<p>
+							<h3>
 							Origen: URU 
 							Destino: BUE 
 							Fecha: 13/10/2012 
-							<table border="1">
+							</h3>
+							<table>
 								<tr>
 									<th>Salida</th>
 									<th>Llegada</th>
@@ -99,16 +106,19 @@
 									<td>COR, ARG</td>
 									<td>Lapa</td>
 									<td>*****<br>
-										Leer comentarios
+										<a href="comments.html">(Ver comentarios)</a>
 									</td>
 								</tr>
 							</table>
+							</p>
 						</div>
+					</div>						
 					</div>
-            </div>
+				</div>				
+			</div>
 			<div id="footer">
                     <h5>Despejar.com© Casi todos los derechos reservados</h5>
-                </div>
-        </div>
+				</div>
+		</div>
 </body>
 </html>

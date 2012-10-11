@@ -6,26 +6,44 @@ body {
 	}
 table
 {
-border-collapse:collapse;
+	border-collapse:collapse;
+	text-align: center;
+	font-size: 12px;
+	margin: auto;
 }
 
 table, td, th
 {
-border:0px solid black;
+	border:0px solid black;
 }
 
+input{
+	width: 165px;
+	height: 20px;
+	margin: 5px;
+	border: 1px solid #0095cd;
+}
+
+select{
+	border: 1px solid #0095cd;
+}
+
+h3{
+	margin:0px 0px 10px 0px;
+}
 /* Language bar */
 #header {
 	height:35px;
-	padding: 5px;
+	padding: 10px;
 	text-align:right;
-	}
+}
 
 /* Logo */
 #logo{
-	color: #4c4c4c;
+margin: -60px 0px 0px 0px;
+	color: #667486;
 	text-align: center;
-	}
+}
 	
 /* Footer style */
 #footer {
@@ -33,34 +51,36 @@ border:0px solid black;
 	text-align: center;
 	clear: both;
 	color: #667486;
-	}
-
-/* Posicionamiento de cajas  particulares*/
-#search {
-	width: 200px;
-	float:left;
-}
-
-#main{
-	width: 400px;
-	float: right;
 }
 
 /* Caja contenedor */
 #container {
-	margin-left: auto ;
-	margin-right: auto ;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius:15px;
-	width: 640px;
-	padding:5px 20px 20px 20px;
+	width: 810px;
+	padding:20px;
 	background-color: white;
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	overflow: auto;
 }
-	
+
+/* Posicionamiento de cajas  particulares*/
+#search {
+	width: 180px;
+	float:left;
+}
+
+#main{
+	margin: 0px 0px 0px 20px;
+	width: 580px;
+	float: left;
+}
+
 /* Caja interna */
 .inner_box {
 	text-align: center;	
-	padding: 5px 5px 20px 5px;
+	padding: 15px;
 	background-color: #B9EAFD;
 	border-radius: 10px;
 }
@@ -69,27 +89,45 @@ border:0px solid black;
 	color: #0095cd;
 }
 
+/* contenedor de caja de resultados */
+#result{
+	overflow: auto;
+}
+
 /* caja de resultados */
 #price{
+	padding: 50px 0px 0px 0px;
+	width:140px;
+	border-radius: 10px;
+	color: #d9eef7;
+	background-color: #0095cd;
+	text-align: center;
 	float: left;
-	width: 100px;
+	height:160px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 }
 
-.table_data{
-	text-align: left;
+#price a{
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	color: #d9eef7;
+	text-decoration: none;
 	font-size: 12px;
-	float: right;
-	width: 300px;
 }
 
-.table_data td
-{
-text-align:center;
+#flight_info{
+	padding: 0px 0px 0px 10px;
+	float: left;
+}
+
+#flight_info a{
+	color: #0095cd;
+	text-decoration: none;
 }
 	
 /* Botones */
 .button {
 	display: inline-block;
+	outline: none;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
@@ -102,15 +140,6 @@ text-align:center;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    }
-    
-.button:active {
-	position: relative;
-	top: 1px;
-}
-
-/* Color for buttons */
-.blue {
 	color: #d9eef7;
 	border: solid 1px #0076a3;
 	background: #0095cd;
@@ -118,13 +147,18 @@ text-align:center;
 	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
 }
-.blue:hover {
+
+.button:hover {
+	text-decoration: none;
 	background: #007ead;
 	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
 	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
 }
-.blue:active {
+
+.button:active {
+	position: relative;
+	top: 1px;
 	color: #80bed6;
 	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
 	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
