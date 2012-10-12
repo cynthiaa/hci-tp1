@@ -2,7 +2,7 @@
 
 body {
 	background-color: #E8F2F6;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: Arial;
 	}
 table
 {
@@ -31,6 +31,7 @@ select{
 h3{
 	margin:0px 0px 10px 0px;
 }
+
 /* Language bar */
 #header {
 	height:35px;
@@ -67,6 +68,7 @@ h3{
 
 /* pagina principal */
 #left_search{
+width:340px;
 	float:right;
 }
 
@@ -102,6 +104,14 @@ h2 span {
 	float: left;
 }
 
+/* resultados */
+#order_criteria{
+	text-align: right;
+	padding: 1px 20px 1px 20px;
+	background-color: #B9EAFD;
+	border-radius: 10px;
+}
+
 /* Caja interna */
 .inner_box {
 	text-align: center;	
@@ -116,6 +126,7 @@ h2 span {
 
 /* contenedor de caja de resultados */
 #result{
+padding: 0px;
 	overflow: auto;
 }
 
@@ -132,7 +143,7 @@ h2 span {
 	background-color: #0095cd;
 	text-align: center;
 	float: left;
-	height:160px;
+	height:162px;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 }
 
@@ -145,7 +156,7 @@ h2 span {
 
 #flight_info{
 	padding: 0px 0px 0px 10px;
-	float: left;
+	float: auto;
 }
 
 #flight_info a{

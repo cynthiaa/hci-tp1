@@ -37,37 +37,41 @@
 					<h3>Búsqueda de vuelos</h3>
                     <form>
 						<p>
-						Origen: <input type="text" placeholder="Lugar o aeropuerto de origen" name="origin"><br>
-						Destino: <input type="text" placeholder="Lugar o aeropuerto de destino" name="destination"><br>
+						Origen: <input type="text" placeholder="Aeropuerto de origen" name="origin"><br>
+						Destino: <input type="text" placeholder="Aeropuerto de destino" name="destination"><br>
 						Partida: <input type="text" placeholder="Fecha de partida" name="departure"><br>
 						Destino: <input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
 						</p>
 						<p>
-						Adultos:
+						Adultos(11 años en adelante):
 						<select name="adults_num">
 							<option value="1adults" selected="selected">1</option>
 							<option value="2adults">2</option>
 							<option value="3adults">3</option>
 						</select>
-						Niños:
+						</p>
+						<p>
+						Niños (de 2 a 11 años):
 						<select name="kids_num">
 							<option value="1kids" selected="selected">1</option>
 							<option value="2kids">2</option>
 							<option value="3kids">3</option>
 						</select>
-						Infantes:
+						</p>
+						<p>
+						Infantes (de 0 a 2 años):
 						<select name="infants_num">
 							<option value="1infants" selected="selected">1</option>
 							<option value="2infants">2</option>
 							<option value="3infants">3</option>
 						</select>
 						</p>
-						<h3>Calendario</h3>
+						<!-- <h3>Calendario</h3>
 						<p>
 						<div class="calendar">
 							<input type="text" name="ingreso" id="ingreso" value="dd-mm-yyyy" />
 							<img src="calendar/imagen/calendar.png" width="16" height="16" border="0" title="Fecha Inicial" id="lanzador">
-							<!-- Script que define el calendar--> 
+							
 							<script type="text/javascript"> 
    							Calendar.setup({ 
     							inputField: "ingreso",	// ID del campo de txt 
@@ -77,7 +81,8 @@
 							</script>
 						</div>						
 						</p>
-						<a class="button" onClick="javascript:alert('Aún no disponible');">Busqueda avanzada</a>
+						-->
+						<br>
 						<a class="button" href="results.html">Buscar vuelos</a>
                     </form>
                 </div>
@@ -85,7 +90,9 @@
 				<br>
 				<div class="inner_box">
 					<h3>Promociones (google maps)</h3>
+					<p>
 					-
+					</p>
 				</div>
             </div>
 			<div id="footer">

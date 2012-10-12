@@ -21,8 +21,8 @@
                 <div id="search" class="inner_box">
                     <h3>Búsqueda de vuelos</h3>
                     <form>
-						Origen:<br><input type="text" placeholder="Lugar o aeropuerto de origen" name="origin"><br>
-						Destino:<br><input type="text" placeholder="Lugar o aeropuerto de destino" name="destination"><br>
+						Origen:<br><input type="text" placeholder="Aeropuerto de origen" name="origin"><br>
+						Destino:<br><input type="text" placeholder="Aeropuerto de destino" name="destination"><br>
 						Partida:<br><input type="text" placeholder="Fecha de partida" name="departure"><br>
 						Destino:<br><input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
 						Adultos:<br>
@@ -48,10 +48,22 @@
                     </form>
                 </div>
 				<div id="main">
+				<div id="order_criteria">
+					<p>
+					Ordenar por 
+					<select name="order_by">
+							<option value="price" selected="selected">Precio</option>
+							<option value="scales">Escalas</option>
+							<option value="airline">Aerolinea</option>
+							<option value="duration">Duracion</option>
+					</select>
+					</p>
+				</div>
+				<br>
 					<div id="result" class="inner_box">	
 						<div id="price">
 							<p>
-							<b>Costo: 50$</b><br>
+							<b>Precio: 50$</b><br>
 							<a href="detalles.html">(Ver detalles)</a><br>
 							</p>
 							<p>
@@ -112,7 +124,52 @@
 							</table>
 							</p>
 						</div>
-					</div>						
+					</div>
+					<p>					
+					Cuando hace click en ver detalle cambia el div de la derecha:
+					</p>
+					<div id="result" class="inner_box">	
+						<div id="price">
+							<p>
+							<b>Precio: 50$</b><br>
+							<a href="detalles.html">(Ver detalles)</a><br>
+							</p>
+							<p>
+							<a class="button" href="buy.html">Comprar</a></p>
+						</div>
+						<div id="flight_info">
+						<p>
+							<h3>	
+							Desglose de precio
+							</h3>
+						</p>
+						<p>
+							<table>
+								<tr>
+									<th>Por adultos</th>
+									<th>Por niños</th>
+									<th>Por infantes</th>
+								</tr>
+								<tr>
+									<td>120$</td>
+									<td>120$</td>
+									<td>120$</td>
+								</tr>
+							</table>
+							</p>
+							<p>
+							<table>
+								<tr>
+									<th>Por impuestos y cargas</th>
+								</tr>
+								<tr>
+									<td>120$</td>
+								</tr>
+							</table>
+						</div>
+						</p>
+						<h3>Total: 120$</h3>
+					</div>
 					</div>
 				</div>				
 			</div>
