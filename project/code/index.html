@@ -18,49 +18,60 @@
 <body>
         <div id="wrap" >
             <div id="header">
-					<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
+				<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
                     <option value="link pagina 1">Español</option>>
                     <option value="link pagina 2">English</option> 
-               </select>
+                </select>
             </div>
        </div>
 	   <div id="logo" >
             <h1>Despejar.com</h1>
         </div>
-        <div id="container">
+		<div id="menu" class="container thinner">
+			<a class="button" href="results.html">Buscar vuelo</a> 
+			<a class="button" href="promotions.html">Promociones</a>
+			<a class="button" href="comment.html">Comentar vuelo</a> 			
+			<a class="button" href="about.html">Sobre nosotros</a> 
+		</div>
+		<br>
+        <div class="container thinner">
 			<div id="fix">
-				<div id="picture">
-					<img src="images/home.png"/>
-					<h2><span>Los viajes mas diver</span><h2>
-				</div>
 				<div id="left_search" class="inner_box">
 					<h3>Búsqueda de vuelos</h3>
                     <form>
 						<p>
-						Origen: <input type="text" placeholder="Aeropuerto de origen" name="origin"><br>
-						Destino: <input type="text" placeholder="Aeropuerto de destino" name="destination"><br>
-						Partida: <input type="text" placeholder="Fecha de partida" name="departure"><br>
-						Destino: <input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
+						<div id="search_params">
+						<label>Origen:</label>
+						<input type="text" placeholder="Aeropuerto de origen" name="origin"><br>
+						<label>Destino:</label>
+						<input type="text" placeholder="Aeropuerto de destino" name="destination"><br>
+						<label>Partida:</label>
+						<input type="text" placeholder="Fecha de partida" name="departure"><br>
+						<label>Destino:</label>
+						<input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
+						</div>
 						</p>
 						<p>
-						Adultos(11 años en adelante):
+						<div id="passengers_ages">
+						<label>Adultos(11 años o más):</label>
 						<select name="adults_num">
 							<option value="1adults" selected="selected">1</option>
 							<option value="2adults">2</option>
 							<option value="3adults">3</option>
 						</select><br>
-						Niños (de 2 a 11 años):
+						<label>Niños (de 2 a 11 años):</label>
 						<select name="kids_num">
 							<option value="1kids" selected="selected">1</option>
 							<option value="2kids">2</option>
 							<option value="3kids">3</option>
 						</select><br>
-						Infantes (de 0 a 2 años):
+						<label>Infantes (de 0 a 2 años):</label>
 						<select name="infants_num">
 							<option value="1infants" selected="selected">1</option>
 							<option value="2infants">2</option>
 							<option value="3infants">3</option>
 						</select>
+						</div>
 						</p>
 						<!-- <h3>Calendario</h3>
 						<p>
@@ -78,18 +89,13 @@
 						</div>						
 						</p>
 						-->
-						<br>
 						<a class="button" href="results.html">Buscar vuelos</a>
                     </form>
                 </div>
-			</div>
-				<br>
-				<div class="inner_box">
-					<h3>Promociones (google maps)</h3>
-					<p>
-					-
-					</p>
+				<div id="picture" >
+					<img src="images/home.png"/>
 				</div>
+			</div>
             </div>
 			<div id="footer">
                     <h5>Despejar.com© Casi todos los derechos reservados</h5>
