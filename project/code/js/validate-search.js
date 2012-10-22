@@ -26,7 +26,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 		$("#search_button").click(function () {	
 			if (!$("#search_form").valid())
-                alert("Validation  not succeded!");
+                alert("Error en el formulario. Revise los parametros resaltados.");
 			else
 				return;
         });

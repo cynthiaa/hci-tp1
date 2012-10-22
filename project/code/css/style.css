@@ -18,7 +18,7 @@ table, td, th
 	border-left:solid 5px transparent;
 }
 
-input{
+input[type="text"]{
 	width: 165px;
 	height: 20px;
 	margin: 0px 0px 10px 0px;
@@ -213,6 +213,8 @@ display: block
 }
 	
 /* Botones */
+
+
 .button {
 	word-spacing:2px;
 	display: inline-block;
@@ -237,6 +239,9 @@ display: block
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
 }
 
+#search_button .button {
+	padding: 0px;
+}
 .button:hover {
 	text-decoration: none;
 	background: #007ead;
