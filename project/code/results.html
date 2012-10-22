@@ -11,8 +11,9 @@
 	<script src="js/jquery-ui-1.9.0.custom.js" type="text/javascript"/></script>
 	<script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"/></script>
 	<script src="js/jquery.validate.js" type="text/javascript"/></script>
+	<script src="js/price-details.js" type="text/javascript"/></script>
 </head>
-<body>
+<body>			
 		<div id="wrap" >
             <div id="header">
 					<select name="selCombo" onChange="javascript:alert('Aún no disponible');"> 
@@ -66,11 +67,11 @@
 					</p>
 				</div>
 				<br>
-					<div id="result" class="inner_box">	
+					<div id="result" class="inner_box result">	
 						<div id="price">
 							<p>
 							<b>Precio: 50$</b><br>
-							<a href="detalles.html">(Ver detalles)</a><br>
+							<a id="view_price_detail">(Ver detalles)</a><br>
 							</p>
 							<p>
 							<a class="button" href="buy.html">Comprar</a></p>
@@ -130,15 +131,42 @@
 							</table>
 							</p>
 						</div>
+						<div id="flight_price">
+							<p>
+							<h3>	
+							Desglose de precio
+							</h3>
+							</p>
+							<p>
+							<table>
+								<tr>
+									<th>Por adultos</th>
+									<th>Por niños</th>
+									<th>Por infantes</th>
+									<th>Por impuestos y cargas</th>
+								</tr>
+								<tr>
+									<td>120$</td>
+									<td>120$</td>
+									<td>120$</td>
+									<td>120$</td>
+								</tr>
+							</table>
+							</p>
+							<p>
+							<h3>Total: 120$</h3>
+							</p>
+							<a id="volver">
+								< volver >
+							</a>
+						</div>	
 					</div>
-					<p>					
-					Cuando hace click en ver detalle cambia el div de la derecha:
-					</p>
-					<div id="result" class="inner_box">	
+					<br>
+					<div id="result" class="inner_box result">	
 						<div id="price">
 							<p>
 							<b>Precio: 50$</b><br>
-							<a href="detalles.html">(Ver detalles)</a><br>
+							<a id="view_price_detail">(Ver detalles)</a><br>
 							</p>
 							<p>
 							<a class="button" href="buy.html">Comprar</a></p>
@@ -146,17 +174,74 @@
 						<div id="flight_info">
 						<p>
 							<h3>	
+							Origen: BUE 
+							Destino: URU 
+							Fecha: 12/10/2012 	
+							</h3>
+							<table>
+								<tr>
+									<th>Salida</th>
+									<th>Llegada</th>
+									<th>Duración</th>
+									<th>Escalas</th>
+									<th>Aerolinea</th>
+									<th>Calificación</th>
+								</tr>
+								<tr>
+									<td>12/10/2012</td>
+									<td>12/10/2012</td>
+									<td>3 hs</td>
+									<td>COR, ARG</td>
+									<td>Lapa</td>
+									<td>*****<br>
+										<a href="comments.html">(Ver comentarios)</a>
+								</tr>
+							</table>
+							</p>
+							<p>
+							<h3>
+							Origen: URU 
+							Destino: BUE 
+							Fecha: 13/10/2012 
+							</h3>
+							<table>
+								<tr>
+									<th>Salida</th>
+									<th>Llegada</th>
+									<th>Duración</th>
+									<th>Escalas</th>
+									<th>Aerolinea</th>
+									<th>Calificación</th>
+								</tr>
+								<tr>
+									<td>13/10/2012</td>
+									<td>13/10/2012</td>
+									<td>3 hs</td>
+									<td>COR, ARG</td>
+									<td>Lapa</td>
+									<td>*****<br>
+										<a href="comments.html">(Ver comentarios)</a>
+									</td>
+								</tr>
+							</table>
+							</p>
+						</div>
+						<div id="flight_price">
+							<p>
+							<h3>	
 							Desglose de precio
 							</h3>
-						</p>
-						<p>
+							</p>
+							<p>
 							<table>
 								<tr>
 									<th>Por adultos</th>
 									<th>Por niños</th>
 									<th>Por infantes</th>
+									<th>Por impuestos y cargas</th>
 								</tr>
 								<tr>
+									<td>120$</td>
 									<td>120$</td>
 									<td>120$</td>
 									<td>120$</td>
@@ -164,17 +249,12 @@
 							</table>
 							</p>
 							<p>
-							<table>
-								<tr>
-									<th>Por impuestos y cargas</th>
-								</tr>
-								<tr>
-									<td>120$</td>
-								</tr>
-							</table>
-						</div>
-						</p>
-						<h3>Total: 120$</h3>
+							<h3>Total: 120$</h3>
+							</p>
+							<a id="volver">
+								< volver >
+							</a>
+						</div>	
 					</div>
 					</div>
 				</div>				

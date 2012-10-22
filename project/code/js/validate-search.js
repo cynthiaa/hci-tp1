@@ -8,8 +8,7 @@ $(document).ready(function() {
 				required: true
 			},
 			return_date: {
-				date:true,
-				required: true
+				date:true
 			}
         },
         messages : {
@@ -29,7 +28,7 @@ $(document).ready(function() {
 			if (!$("#search_form").valid())
                 alert("Validation  not succeded!");
 			else
-				alert("Validation success!");
+				return;
         });
 });
 
