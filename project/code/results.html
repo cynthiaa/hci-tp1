@@ -10,8 +10,12 @@
     <script src="js/jquery-1.8.2.js" type="text/javascript"/></script>
 	<script src="js/jquery-ui-1.9.0.custom.js" type="text/javascript"/></script>
 	<script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"/></script>
-	<script src="js/jquery.validate.js" type="text/javascript"/></script>
 	<script src="js/price-details.js" type="text/javascript"/></script>
+	<script src="js/jquery.ui.datepicker-es.js" type="text/javascript"/></script>
+	<script src="js/jquery.validate.min.js" type="text/javascript"/></script>
+	<script src="js/jquery.validate.wrapper.js" type="text/javascript"/></script>
+	<script src="js/validate-search.js" type="text/javascript"/></script>
+	<script src="js/date-range.js" type="text/javascript"/></script>
 </head>
 <body>			
 		<div id="wrap" >
@@ -27,11 +31,11 @@
             <div class="container">
                 <div id="search" class="inner_box">
                     <h3>Búsqueda de vuelos</h3>
-                    <form>
+                    <form id="search_form">
 						Origen:<br><input type="text" placeholder="Aeropuerto de origen" name="origin"><br>
 						Destino:<br><input type="text" placeholder="Aeropuerto de destino" name="destination"><br>
-						Partida:<br><input type="text" placeholder="Fecha de partida" name="departure"><br>
-						Destino:<br><input type="text" placeholder="Opcional si es solo de ida" name="return"><br>
+						Partida:<br><input type="text" placeholder="Fecha de partida" id="departure_date" name="departure_date"><br>
+						Destino:<br><input type="text" placeholder="Opcional si es solo de ida" id="return_date" name="return_date"><br>
 						Adultos:<br>
 						<select name="adults_num">
 							<option value="1adults" selected="selected">1</option>
@@ -51,7 +55,7 @@
 							<option value="3infants">3</option>
 						</select><br>
 						<br>
-						<a class="button" href="results.html">Buscar vuelos</a><br>
+						<a id="search_button" class="button" href="results.html">Buscar vuelos</a><br>
                     </form>
                 </div>
 				<div id="main">
