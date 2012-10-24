@@ -16,7 +16,7 @@
 	<script src="js/validate-search.js" type="text/javascript"/></script>
 	<script src="js/date-range.js" type="text/javascript"/></script>
 	<script src="js/query-string-parser.js" type="text/javascript"/></script>
-	<script src="js/perform-initial-search.js" type="text/javascript"/></script>
+	<script src="js/perform-search.js" type="text/javascript"/></script>
 	<script src="js/view-details.js" type="text/javascript"/></script>
 </head>
 <body>			
@@ -72,9 +72,9 @@
 						</select>
 						</p>
 					</div>
-					<br>
 					<div id="all_results">
-						<div id="result" class="inner_box result">	
+					<br>
+					<div id="result" class="inner_box result">	
 							<div id="price">
 								<p>
 								<b>Precio: 50$</b><br>
@@ -86,9 +86,9 @@
 							<div id="flight_info">
 								<p>
 								<h3>	
-								Origen: BUE 
-								Destino: URU 
-								Fecha: 12/10/2012 	
+									Origen: BUE 
+									Destino: URU 
+									Fecha: 12/10/2012 	
 								</h3>
 								<table>
 									<tr>
@@ -141,8 +141,8 @@
 										</td>
 									</tr>
 								</table>
-							</p>
-						</div>
+								</p>
+							</div>
 						<div id="flight_price">
 							<p>
 								<h3>	
@@ -155,9 +155,11 @@
 										<th>Por adultos</th>
 										<th>Por niños</th>
 										<th>Por infantes</th>
-										<th>Por impuestos y cargas</th>
+										<th>Por impuestos</th>
+										<th>Por cargas</th>
 									</tr>
 									<tr>
+										<td>120$</td>
 										<td>120$</td>
 										<td>120$</td>
 										<td>120$</td>
@@ -177,18 +179,22 @@
 								<tr>
 									<th>Nombre de aerolínea</th>
 									<td>Lan</td>
+									<th >Satisfaccion general</th>
 								</tr>
 								<tr>
 									<th>Número de vuelo</th>
 									<td>AR200</td>
+									<td>Piola<td>
 								</tr>
 								<tr>
 									<th>Amabilidad:</th>
 									<td>10</td>
+									<th>Comentarios</th>
 								</tr>
 								<tr>
 									<th>Comida:</th>
 									<td>10</td>
+									<td id="comment_col" rowspan="6">La asafata estaba buena y me gusta el pollo con papas fritas bla bla bla bla bla bla bla bla bla bla bla bla </td>
 								</tr>
 								<tr>
 									<th>Puntualidad:</th>
@@ -216,152 +222,7 @@
 								<a class="next_comment">< siguiente ></a>								
 							</div>
 						</div>
-					</div>
-					<br>
-					<div id="all_results">
-						<div id="result" class="inner_box result">	
-							<div id="price">
-								<p>
-								<b>Precio: 50$</b><br>
-								<a class="view_price_detail">(Ver detalles)</a><br>
-								</p>
-								<p>
-								<a class="button" href="buy.html">Comprar</a></p>
-							</div>
-							<div id="flight_info">
-								<p>
-								<h3>	
-								Origen: BUE 
-								Destino: URU 
-								Fecha: 12/10/2012 	
-								</h3>
-								<table>
-									<tr>
-									<th>Salida</th>
-									<th>Llegada</th>
-									<th>Duración</th>
-									<th>Escalas</th>
-									<th>Aerolinea</th>
-									<th>Calificación</th>
-									</tr>
-									<tr>
-									<td>12/10/2012</td>
-									<td>12/10/2012</td>
-									<td>3 hs</td>
-									<td>COR, ARG</td>
-									<td>Lapa<br>
-									<a id="airline" class="comments">(Comentarios)</a>
-									</td>
-									<td>5/10<br>
-									<a id="flight" class="comments">(Comentarios)</a>
-									</td>
-									</tr>
-								</table>
-								</p>
-								<p>
-								<h3>
-								Origen: URU 
-								Destino: BUE 
-								Fecha: 13/10/2012 
-								</h3>
-								<table>
-									<tr>
-										<th>Salida</th>
-										<th>Llegada</th>
-										<th>Duración</th>
-										<th>Escalas</th>
-										<th>Aerolinea</th>
-										<th>Calificación</th>
-									</tr>
-									<tr>
-										<td>13/10/2012</td>
-										<td>13/10/2012</td>
-										<td>3 hs</td>
-										<td>COR, ARG</td>
-										<td>Lapa<br>
-										<a id="airline" class="comments">(Comentarios)</a>
-										</td>
-										<td>5/10<br>
-										<a id="flight" class="comments">(Comentarios)</a>
-										</td>
-									</tr>
-								</table>
-							</p>
-						</div>
-						<div id="flight_price">
-							<p>
-								<h3>	
-								Desglose de precio
-								</h3>
-							</p>
-							<p>
-								<table>
-									<tr>
-										<th>Por adultos</th>
-										<th>Por niños</th>
-										<th>Por infantes</th>
-										<th>Por impuestos y cargas</th>
-									</tr>
-									<tr>
-										<td>120$</td>
-										<td>120$</td>
-										<td>120$</td>
-										<td>120$</td>
-									</tr>
-								</table>
-							</p>
-							<p>
-								<h3>Total: 120$</h3>
-							</p>
-							<a class="volver">< volver ></a>
-						</div>
-						<div id="flight_comments">
-							<div id="review_info">
-							<p>
-							<table>
-								<tr>
-									<th>Nombre de aerolínea</th>
-									<td>Lan</td>
-								</tr>
-								<tr>
-									<th>Número de vuelo</th>
-									<td>AR200</td>
-								</tr>
-								<tr>
-									<th>Amabilidad:</th>
-									<td>10</td>
-								</tr>
-								<tr>
-									<th>Comida:</th>
-									<td>10</td>
-								</tr>
-								<tr>
-									<th>Puntualidad:</th>
-									<td>10</td>
-								</tr>
-								<tr>
-									<th>Programa viajeros frecuentes:</th>
-									<td>10</td>
-								</tr>
-								<tr>
-									<th>Confort:</th>
-									<td>10</td>
-								</tr>
-								<tr>
-									<th>Relación precio/calidad:</th>
-									<td>10</td>
-								</tr>
-								<tr>
-									<th>Recomendaría a otro:</th>
-									<td>Si</td>
-								</tr>
-								</table>
-								</p>
-								<a class="volver">< volver ></a> 
-								<a class="next_comment">< siguiente ></a>								
-							</div>
-						</div>
-					</div>
+						<br div id="bottom_fix">
 					</div>
 				</div>				
 			</div>

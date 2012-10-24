@@ -42,6 +42,12 @@ h3{
 	margin:0px 0px 10px 0px;
 }
 
+/* Loading div */
+#loading {
+	text-align: center;
+}
+
+
 /* Language bar */
 #header {
 	height:35px;
@@ -141,13 +147,13 @@ display: block
 }
 /* Posicionamiento de cajas  particulares*/
 #search {
-	width: 180px;
+	width: 170px;
 	float:left;
 }
 
 #main{
 	margin: 0px 0px 0px 20px;
-	width: 580px;
+	width: 590px;
 	float: left;
 }
 
@@ -157,6 +163,11 @@ display: block
 	padding: 1px 15px 1px 15px;
 	background-color: #B9EAFD;
 	border-radius: 10px;
+}
+
+#search_error{
+	text-align: center;
+	color: #0095cd;
 }
 
 /* Caja interna */
@@ -173,7 +184,7 @@ display: block
 
 /* contenedor de caja de resultados */
 #result{
-	padding: 0px;
+	padding: 0px 7px 0px 0px;
 	overflow: auto;
 }
 
@@ -190,10 +201,14 @@ display: block
 	background-color: #0095cd;
 	text-align: center;
 	float: left;
-	height:162px;
+	height:180px;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 }
 
+#comment_col{
+	width:55%;
+	vertical-align: top;
+}
 #price a{
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 	color: #d9eef7;

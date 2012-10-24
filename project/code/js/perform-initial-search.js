@@ -6,9 +6,8 @@ $(document).ready(function() {
 	var adult_num = getQuerystring('adults_num');
 	var child_num = getQuerystring('kids_num');
 	var infant_num = getQuerystring('infants_num');
-	
 	//aca viene la llama de ajax
-	
+	displayFlights(orig, dest, dep, ret, adult_num, child_num, infant_num);
 	//aca viene el insertado de divs dinamico
 });
 
@@ -25,27 +24,20 @@ function getQuerystring(key, default_)
 }
 
 function displayFlights(orig, dest, dep, ret, adult_num, child_num, infant_num){
-if (dest == null){
-	var jsonResponse = $.ajax({
-            url: "http://eiffel.itba.edu.ar/hci/service2/Booking.groovy?method=GetOneWayFlights&from="+ orig +"&to="+ dest +"&dep_date="+ dep +"&adults="+ adult_num +"&children="+ child_num +"&infants="+ infant_num;
-            data: params,
-            dataType: "xml",
-            type : "POST",
-            success: function(data) {
-
-                if ($("response", data).attr("status") == "ok") {
-                    success("OK");
-                }
-                else {
-                    error($("error", data).attr("code"));
-                }
+	// one way flight
+	if (ret == ""){
+		$.ajax({
+            url: "http://eiffel.itba.edu.ar/hci/service2/Booking.groovy?method=GetOneWayFlights&from="+ orig +"&to="+ dest +"&dep_date="+ dep +"&adults="+ adult_num +"&children="+ child_num +"&infants="+ infant_num,
+            dataType: "json",
+			success: function(data) {
+                alert(JSON.stringify(error));
             },
-            error: error
-
+            error: function(error) {
+                alert(JSON.stringify(error));
+            }
         });
-
-    }
-}else{
-	
-
+	}else{
+	//ida y vuelta
+	}
 }
+
