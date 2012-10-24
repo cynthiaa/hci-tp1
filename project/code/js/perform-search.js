@@ -204,7 +204,7 @@ function attachClickEvent(){
 			$( ".volver" ).live("click", function() {
 			var result_div = $( this ).parents("#result");
 			if(result_div.children( "#flight_price" ).is(':visible'))
-				result_div.children( "#price" ).animate({"height":"140", "padding":"10px 0px 0px 0px"});
+				result_div.children( "#price" ).animate({"height":"140", "padding":"10px 0px 0px 0px"}, 1000);
 				result_div.children( "#flight_price" ).fadeOut(500);
 			//if(result_div.children( "#flight_comments" ).is(':visible'))
 			//	result_div.children( "#flight_comments" ).fadeOut(500);				
