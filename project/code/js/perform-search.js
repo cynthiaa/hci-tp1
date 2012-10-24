@@ -169,7 +169,7 @@ function displayFlights(flights){
 			var new_div = $("<br><div id='result' class='inner_box result'></div>").appendTo("#all_results");
 			var price_div = $("<div id='price'><p><b>Precio:<br>"+total+"</b><br><a class='view_price_detail'>(Ver detalles)</a><br></p><p><a class='button' href='buy.html"+buy_query+"'>Comprar</a></p></div>").appendTo(new_div);
 			var inbound_div = (flights['flights'][i].hasOwnProperty('inboundRoutes'))? "<p><h3>Origen: "+inbound_departure_airport_id+" Destino: "+inbound_arrival_airport_id+"</h3><table><tr><th>Salida</th><th>Llegada</th><th>Duración</th><th>Escalas</th><th>Aerolinea</th><th>Vuelo</th></tr><tr><td>"+inbound_departure_date+"</td><td>"+inbound_arrival_date+"</td><td>"+inbound_duration+"</td><td>"+stopovers+"</td><td>"+inbound_airline_name+"<br><a id='airline' class='comments'>(Comentarios)</a></td><td>"+inbound_airline_rating+"<br><a id='flight' class='comments'>(Comentarios)</a></td></tr></table></p>":"";
-			var outbound_div =$("<div class='flight_info'><p><h3>Origen: "+ outbound_departure_city_id +" Destino: "+ outbound_arrival_city_id +"</h3><table><tr><th>Salida</th><th>Llegada</th><th>Duracion</th><th>Escalas</th><th>Aerolinea</th><th>Vuelo</th></tr><tr><td>"+outbound_departure_date+"</td><td>"+outbound_arrival_date+"</td><td>"+outbound_duration+"</td><td>"+stopovers+"</td><td>"+outbound_airline_name+"<br><a id='airline' class='comments'>(Comentarios)</a></td><td>"+outbound_airline_rating+"<br><a id='flight' class='comments'>(Comentarios)</a></td></tr></table></p>"+inbound_div+"</div>").appendTo(new_div);
+			var outbound_div =$("<div id='flight_info'><p><h3>Origen: "+ outbound_departure_city_id +" Destino: "+ outbound_arrival_city_id +"</h3><table><tr><th>Salida</th><th>Llegada</th><th>Duracion</th><th>Escalas</th><th>Aerolinea</th><th>Vuelo</th></tr><tr><td>"+outbound_departure_date+"</td><td>"+outbound_arrival_date+"</td><td>"+outbound_duration+"</td><td>"+stopovers+"</td><td>"+outbound_airline_name+"<br><a id='airline' class='comments'>(Comentarios)</a></td><td>"+outbound_airline_rating+"<br><a id='flight' class='comments'>(Comentarios)</a></td></tr></table></p>"+inbound_div+"</div>").appendTo(new_div);
 			if (inbound_div == ""){
 				price_div.css({"height":"140px", "padding":"5px 0px 0px 0px"});
 				outbound_div.css({"padding":"10px 0px 0px 0px"});
@@ -184,19 +184,30 @@ function displayFlights(flights){
 			$(".result").fadeIn(500).delay(800);
 			flight_price.hide(0);
 		}
-		viewPriceDetail(outbound_div, price_div, flight_price);			
+		attachClickEvent();			
 	}
 	return;
 }
 
-function viewPriceDetail(outbound_div, price_div, flight_price){
+function attachClickEvent(){
 	//agrego un handler dinamicamente
 			$( ".view_price_detail" ).live("click", function() {
-				if(outbound_div.is(':visible'))
-					outbound_div.fadeOut(500);
-				//if(result_div.children( "#flight_comments" ).is(':visible'))
-				//result_div.children( "#flight_comments" ).fadeOut(500);				
-				flight_price.delay(600).fadeIn(1000);
-				price_div.animate({"height":"150px", "padding":"30px 0px 0px 0px"})
+				var result_div = $( this ).parents("#result");
+					if(result_div.children( "#flight_info" ).is(':visible'))
+						result_div.children( "#price" ).animate({"height":"155px", "padding":"25px 0px 0px 0px"});
+						result_div.children( "#flight_info" ).fadeOut(500);
+					//if(result_div.children( "#flight_comments" ).is(':visible'))
+					//	result_div.children( "#flight_comments" ).fadeOut(500);				
+				result_div.children( "#flight_price" ).delay(600).fadeIn(1000);
+			});
+			
+			$( ".volver" ).live("click", function() {
+			var result_div = $( this ).parents("#result");
+			if(result_div.children( "#flight_price" ).is(':visible'))
+				result_div.children( "#price" ).animate({"height":"140", "padding":"10px 0px 0px 0px"});
+				result_div.children( "#flight_price" ).fadeOut(500);
+			//if(result_div.children( "#flight_comments" ).is(':visible'))
+			//	result_div.children( "#flight_comments" ).fadeOut(500);				
+			result_div.children( "#flight_info" ).delay(600).fadeIn(1000);
 			});
 }	
