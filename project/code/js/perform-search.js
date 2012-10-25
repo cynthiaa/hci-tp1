@@ -8,6 +8,14 @@ $(document).ready(function() {
 	var infant_num = getQuerystring('infants_num');
 	var sort_key = "total";
 	var sort_order = "asc";
+	$("#origin").val(orig);
+	$("#destination").val(dest);
+	$("#departure_date").val(dep);
+	$("#return_date").val(ret);
+	$("#adults_num").val(adult_num);
+	$("#kids_num").val(child_num);
+	$("#infants_num").val(infant_num);
+	
 	//aca viene la llamada de ajax
 	retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, sort_order);
 	
