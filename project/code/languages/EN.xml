@@ -4,7 +4,6 @@
 		<search_flight>Search flight</search_flight>
 		<deals>Deals</deals>
 		<comment_flight>Comment flight</comment_flight>
-		<about_us>About us</about_us>
 		<search_label>Flights search</search_label>
 		<origin_label>Origin:</origin_label>
 		<origin>Origin airport</origin>
@@ -22,5 +21,13 @@
 	<results_dinamic>
 		<price_detail>Price detail</price_detail>
 	</results_dinamic>
+	<promotions>
+		
+		
+	</promotions>
+	<about>
+		<about_us_title>About us</about_us_title>
+		<about_us>We are just cool people</about_us>	
+	</about>
 	<footer_text> Despejar.com© Almost all rights reserved</footer_text>
 </language>

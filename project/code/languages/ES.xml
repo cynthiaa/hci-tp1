@@ -4,7 +4,6 @@
 		<search_flight>Buscar vuelo</search_flight>
 		<deals>Promociones</deals>
 		<comment_flight>Comentar vuelo</comment_flight>
-		<about_us>Sobre nosotros</about_us>
 		<search_label>Búsqueda de vuelos</search_label>
 		<origin_label>Origen:</origin_label>
 		<origin>Aeropuerto de origen</origin>
@@ -22,5 +21,15 @@
 	<results_dinamic>
 		<price_detail>Ver detalles</price_detail>
 	</results_dinamic>
+	<promotions>
+		
+		
+	</promotions>
+	<about>
+		<about_us_title>Sobre nosotros</about_us_title>
+		<about_us>Somos gente copada</about_us>
+		
+	
+	</about>
 	<footer_text> Despejar.com© Casi todos los derechos reservados</footer_text>
 </language>

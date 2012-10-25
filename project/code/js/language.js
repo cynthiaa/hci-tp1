@@ -1,12 +1,10 @@
 $(document).ready(function() {
 		var lang = getCookie("lang");
-		alert("OKA"+lang);
 		if(lang == null){
 			lang = "ES";
 		}
 		$("#languageSelector option[value="+lang+"]").attr("selected",true);
 		loadLanguage(lang);	
-		alert(translateElem("price_detail"));	
 		translate();
 	   $("#languageSelector").change(function() {
 		   var lid = $("option:selected",this).attr('value');
@@ -41,7 +39,7 @@ function translate(){
 		var code=idStr.replace(/.*translate_([^\s]*)[\s.*]?/,'$1');		
 			   $(this).text($(language).find(code).text());
 		   });
-	$('[class^="translate"]').each(function(){
+	$('[class*="translate"]').each(function(){
 		var id = $(this).attr('id');
 		var code=id.replace(/.*translate_([^\s]*)[\s.*]?/,'$1');
 		if(this.nodeName.toLowerCase() == 'input' ) {
