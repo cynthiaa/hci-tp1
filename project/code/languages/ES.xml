@@ -17,8 +17,10 @@
 		<adults_selectQ>Adultos (11 años o más) </adults_selectQ>
 		<kids_selectQ>Niños	(de 2 a 11 años) </kids_selectQ>
 		<inf_selectQ>Infantes (de 0 a 2 años) </inf_selectQ>
-		<initial_search>Search! </initial_search>
 		<initial_search>Buscar! </initial_search>
 	</search>
+	<results_dinamic>
+		<price_detail>Ver detalles</price_detail>
+	</results_dinamic>
 	<footer_text> Despejar.com© Casi todos los derechos reservados</footer_text>
 </language>

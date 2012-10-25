@@ -5,17 +5,15 @@ $(document).ready(function() {
 			lang = "ES";
 		}
 		$("#languageSelector option[value="+lang+"]").attr("selected",true);
-		alert("OK" + lang);
-		loadLanguage(lang);		
+		loadLanguage(lang);	
+		alert(translateElem("price_detail"));	
 		translate();
 	   $("#languageSelector").change(function() {
 		   var lid = $("option:selected",this).attr('value');
 		   loadLanguage(lid);
 		   $("#destination_label").text($(language).find("destination_label").text());
 		   setCookie("lang",lid,3);
-		   translate();
-		   
-		      
+		   translate();	      
 	});	
 });
 
@@ -73,6 +71,16 @@ function translate(){
 		//}
 		
 	//});
+}
+
+function translateElem(idElem) {
+	alert(language);
+	if(language == null){
+		loadLanguage(getCookie("lang"));
+	}
+	var resp;
+	resp = ($(language).find(idElem).text());
+	return resp;
 }
 
 function setCookie(c_name,value,exdays) {

@@ -24,16 +24,23 @@
 		<div id="wrap" >
             <div id="header">
 					<select id="languageSelector" name="selCombo" size=1"> 
-                    <option value="link pagina 1">Español</option>>
-                    <option value="link pagina 2">English</option> 
+                    <option value="ES">Español</option>
+                    <option value="EN">English</option> 
                </select>
             </div>
             <div id="logo" >
-                <h1>Despejar.com</h1>
+                <a href="index.html"><h1>Despejar.com</h1></a>
             </div>
+            <div id="menu" class="container thinner">
+				<a id="translate_search_flight" class="button" href="#">Buscar vuelo</a> 
+				<a id="translate_deals" class="button" href="promotions.html">Promociones</a>
+				<a id="translate_comment_flight" class="button" href="comment.html">Comentar vuelo</a> 			
+				<a id="translate_about_us" class="button" href="about.html">Sobre nosotros</a> 
+			</div>
+		<br>
             <div class="container">
                 <div id="search" class="inner_box">
-                    <h3>Búsqueda de vuelos</h3>
+                    <h3 id="translate_search_label" class="translate">Búsqueda de vuelos</h3>
                     <form id="search_form" action="results.html" method="get">
 						<p>
 						<div id="search_params">
@@ -47,24 +54,33 @@
 						<input id="return_date" class="translate" type="text" placeholder="Opcional si es solo de ida" id="return_date" name="return_date" readonly="readonly"><br>
 						</div>
 						</p>
-						Adultos:<br>
-						<select name="adults_num" id="adults_num">
-							<option selected="selected">1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-						<br>Niños:<br>
-						<select name="kids_num" id="kids_num">
-							<option selected="selected">1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-						<br>Infantes:<br>
-						<select name="infants_num" id="infants_num">
-							<option selected="selected">1</option>
-							<option>2</option>
-							<option>3</option>
+						<label id="adults_selectQ" class="translate" >Adultos(11 años o más):</label><br>
+						<select name="adults_num">
+							<option value="1" selected="selected">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
 						</select><br>
+						<label id="kids_selectQ" class="translate">Niños (de 2 a 11 años):</label><br>
+						<select name="kids_num">
+							<option value="0" selected="selected">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select><br>
+						<label id="inf_selectQ" class="translate">Infantes (de 0 a 2 años):</label><br>
+						<select name="infants_num">
+							<option value="0" selected="selected">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+						<br>
 						<br>
 						<a id="search_flights" class="button">Buscar vuelos</a><br>
                     </form>
@@ -87,7 +103,7 @@
 							<div id="price">
 								<p>
 								<b>Precio: 50$</b><br>
-								<a class="view_price_detail">(Ver detalles)</a><br>
+								<a id="translate_price_detail" class="view_price_detail">(Ver detalles)</a><br>
 								</p>
 								<p>
 								<a class="button" href="buy.html">Comprar</a></p>
@@ -237,7 +253,7 @@
 			</div>
 		</div>
 					<div id="footer">
-                    <h5>Despejar.com© Casi todos los derechos reservados</h5>
+                    <h5 id="footer_text" class="translate">Despejar.com© Casi todos los derechos reservados</h5>
 				</div>
 </body>
 </html>

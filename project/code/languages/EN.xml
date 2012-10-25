@@ -15,9 +15,12 @@
 		<return_label>Return:</return_label>
 		<return_date>Only for round trip</return_date>
 		<adults_selectQ>Adults (11 years or more) </adults_selectQ>
-		<kids_selectQ>Niños	(from 2 to 11 years) </kids_selectQ>
-		<inf_selectQ>Infantes (from 0 to 2 years) </inf_selectQ>
+		<kids_selectQ>Kids	(from 2 to 11 years) </kids_selectQ>
+		<inf_selectQ>Infants (from 0 to 2 years) </inf_selectQ>
 		<initial_search>Search! </initial_search>
 	</search>
+	<results_dinamic>
+		<price_detail>Price detail</price_detail>
+	</results_dinamic>
 	<footer_text> Despejar.com© Almost all rights reserved</footer_text>
 </language>
