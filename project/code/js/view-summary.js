@@ -107,7 +107,8 @@ $(document).ready(function() {
 	}
 
 	$( "#next_page" ).click(function() {
-		document.location.href="buy.html?"+window.location.search.substring(1);
+		var query_string = "?flight_id="+outbound_flight_number+"&adult_quant="+adult_quant+"&child_quant="+child_quant+"&infant_quant="+infant_quant;
+		document.location.href="buy.html"+query_string;
 	});
 });
 

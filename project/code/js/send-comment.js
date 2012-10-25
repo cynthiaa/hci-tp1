@@ -9,14 +9,14 @@ function sendCommentQuery(airline, flight, amability, food, punctuality, frequen
 
 	var objJson = {"airlineId": "IB","flightNumber": 6831, "friendlinessRating": 8,"foodRating": 9,"punctualityRating": 9,"mileageProgramRating": 6, "comfortRating": 9, "qualityPriceRating": 7, "yesRecommend": true, "comments": ""}
 	objJson.airlineId = airline;
-	objJson.flight = flight;
-	objJson.friendlinessRating = amability;
-	objJson.foodRating = food;
-	objJson.punctualityRating = punctuality;
-	objJson.mileageProgramRating = frequent_passenger;
-	objJson.comfortRating = comfort;
-	objJson.qualityPriceRating = price_quality;
-	objJson.yesRecommend = recommend;
+	objJson.flightNumber = parseInt(flight);
+	objJson.friendlinessRating = parseInt(amability);
+	objJson.foodRating = parseInt(food);
+	objJson.punctualityRating = parseInt(punctuality);
+	objJson.mileageProgramRating = parseInt(frequent_passenger);
+	objJson.comfortRating = parseInt(comfort);
+	objJson.qualityPriceRating = parseInt(price_quality);
+	objJson.yesRecommend = Boolean(recommend);
 	objJson.comments = comments;
 	console.log(JSON.stringify(objJson));
 	$.ajax({
@@ -28,10 +28,10 @@ function sendCommentQuery(airline, flight, amability, food, punctuality, frequen
 			loading();
 		},
 		success: function(data){
-			console.log(data);
+			commentSent(data);
 		},
 		error: function(error){
-			console.log(error);
+			console.log(JSON.stringify(error))
 		}
 	});
 }
@@ -47,19 +47,19 @@ function commentSent(data){
 	var loadDiv = $("#container_box").children("#loading");
 	loadDiv.delay(800).hide(800);	
 	if(data.hasOwnProperty("error")){
-		$("#container_box").append("<br><div id='search_error'><h3>Error "+data.error.code+": "+data.error.message+"</h3></div>");
+		$("#container_box").append("<div id='search_error'><h3>Error "+data.error.code+": "+data.error.message+"</h3></div>");
 		var errorDiv = $("#container_box").children("#search_error");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);
 		return;
 	}
 	if(!data['review']){
-		$("#container_box").append("<div id='no_comments' class='inner_box'><h3>No se pudo enviar su comentario<br>Disculpe las molestias ocasionadas</h3></div><br>");
+		$("#container_box").append("<div id='no_comments' class='inner_box'><h3>No se pudo enviar su comentario<br>Disculpe las molestias ocasionadas</h3></div><");
 		var errorDiv = $("#container_box").children("#no_comments");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);
 	}else{
-		$("#container_box").append("<div id='no_comments' class='inner_box'><h3>Su comentario ha sio enviado exitosamente<br>Gracias por mejorar nuestro servicio</h3></div><br>");
+		$("#container_box").append("<div id='no_comments' class='inner_box'><h3>Su comentario ha sio enviado exitosamente<br>Gracias por mejorar nuestro servicio</h3></div>");
 		var success_div = $("#container_box").children("#no_comments");
 		success_div.hide(0).delay(1000);
 		success_div.fadeIn(500);	

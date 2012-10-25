@@ -6,11 +6,11 @@ $(document).ready(function() {
 	var adult_quant = qs.value('adult_quant');
 	var child_quant = qs.value('child_quant');
 	var infant_quant = qs.value('infant_quant');
-	adult_quant = parseInt(adult_quant);
-	child_quant = parseInt(child_quant);
-	infant_quant = parseInt(infant_quant);
+	adult_quant = (adult_quant == "-")? 0 :parseInt(adult_quant);
+	child_quant = (child_quant == "-")? 0 :parseInt(child_quant);
+	infant_quant = (infant_quant == "-")? 0 :parseInt(infant_quant);
 	// flight data
-	var outbound_flight_number = qs.value('outbound_flight_number');
+	var outbound_flight_number = qs.value('flight_id');
 
 	//creo mi json
 	jsonData = {};
@@ -18,25 +18,25 @@ $(document).ready(function() {
 	//define json structure
 	jsonData['passengers'] = [];
 	for (var i=0;i<adult_quant+child_quant+infant_quant; i++){
-		jsonData['passengers'][i] = { "firstName":"name", "lastName":"lastName", "birthdate":"19-10-1990", "idType":1, "idNumber":"11234" };
+		jsonData['passengers'][i] = { "firstName":"John", "lastName":"Doe", "birthdate":"1969-06-02", "idType":1, "idNumber":"17155171" };
 	}
-	jsonData['payment'] = { "installments":1, "creditCard": { "number":"1234", "expiration":"1234", "securityCode":"123", "firstName":"Juan", "lastName":"Perez"}};
-	jsonData['billingAddress'] = { "country":"AR", "state":"bs as", "City":"cap fed", "postalcode":143, "street":"madero", "floor":"1a", "apartment":"piola"}
-	jsonData['contact'] = {"email":"mail", "phones":["5555-5555"]};
+	jsonData['payment'] = { "installments":1, "creditCard": { "number":"4567899999888", "expiration":"1213", "securityCode":"123", "firstName":"John", "lastName":"Doe"}};
+	jsonData['billingAddress'] = { "country":"AR", "state":"Buenos Aires", "City":"BUE", "postalcode":1435, "street":"Av. Madero 299", "floor":"", "apartment":""}
+	jsonData['contact'] = {"email":"john.doe@hotmail.com", "phones":["5555-5555"]};
 	
 	//create dinamic divs
 	$("#passengers_container").empty();
 	for(var i=1;i<=adult_quant;i++){
-		$("<div id='adult"+i+"'class='inner_box passenger_div'><h3 id='passenger_title'>Pasajero adulto "+i+"</h3><div class='input_div'><label>Nombre:</label><input type='text' name='adult_name_"+i+"' id='adult_name_"+i+"'><br><label>Apellido:</label><input type='text' name='adult_surname_"+i+"' id='adult_surname_"+i+"'><br><label>Fecha de nacimiento:</label><input type='text' name='adult_birth_"+i+"' id='adult_birth_"+i+"'><br><label>DNI:</label><input type='text' name='adult_dni_"+i+"' id='adult_dni_"+i+"'><br><label>Sexo:</label><select name='adult_sex_"+i+"' id='adult_sex_"+i+"'><option id='masculino'>Masculino</option><option id='femenino'>Femenino</option></select></div></div><br>").appendTo("#passengers_container");
+		$("<div id='adult"+i+"'class='inner_box passenger_div'><h3 id='passenger_title'>Pasajero adulto "+i+"</h3><div class='input_div'><label>Nombre:</label><input type='text' name='adult_name_"+i+"' id='adult_name_"+i+"'><br><label>Apellido:</label><input type='text' name='adult_surname_"+i+"' id='adult_surname_"+i+"'><br><label>Fecha de nacimiento:</label><input type='text' name='adult_birth_"+i+"' id='adult_birth_"+i+"'><br><label>DNI:</label><input type='text' name='adult_dni_"+i+"' id='adult_dni_"+i+"'></div></div><br>").appendTo("#passengers_container");
 	}	
 	for(var i=1;i<=child_quant;i++){
-		$("<div id='child"+i+"'class='inner_box passenger_div'><h3 id='passenger_title'>Pasajero niño "+i+"</h3><div class='input_div'><label>Nombre:</label><input type='text' name='child_name_"+i+"' id='child_name_"+i+"'><br><label>Apellido:</label><input type='text' name='child_surname_"+i+"' id='child_surname_"+i+"'><br><label>Fecha de nacimiento:</label><input type='text' name='child_birth_"+i+"' id='child_birth_"+i+"'><br><label>DNI:</label><input type='text' name='child_dni_"+i+"' id='child_dni_"+i+"'><br><label>Sexo:</label><select name='child_sex_"+i+"' id='child_sex_"+i+"'><option id='masculino'>Masculino</option><option id='femenino'>Femenino</option></select></div></div><br>").appendTo("#passengers_container");
+		$("<div id='child"+i+"'class='inner_box passenger_div'><h3 id='passenger_title'>Pasajero niño "+i+"</h3><div class='input_div'><label>Nombre:</label><input type='text' name='child_name_"+i+"' id='child_name_"+i+"'><br><label>Apellido:</label><input type='text' name='child_surname_"+i+"' id='child_surname_"+i+"'><br><label>Fecha de nacimiento:</label><input type='text' name='child_birth_"+i+"' id='child_birth_"+i+"'><br><label>DNI:</label><input type='text' name='child_dni_"+i+"' id='child_dni_"+i+"'><br></div></div><br>").appendTo("#passengers_container");
 	}
 	for(var i=1;i<=infant_quant;i++){
-		$("<div id='infant"+i+"'class='inner_box passenger_div'><h3 id='passenger_title'>Pasajero infante "+i+"</h3><div class='input_div'><label>Nombre:</label><input type='text' name='infant_name_"+i+"' id='infant_name_"+i+"'><br><label>Apellido:</label><input type='text' name='infant_surname_"+i+"' id='infant_surname_"+i+"'><br><label>Fecha de nacimiento:</label><input type='text' name='infant_birth_"+i+"' id='infant_birth_"+i+"'><br><label>DNI:</label><input type='text' name='infant_dni_"+i+"' id='infant_dni_"+i+"'><br><label>Sexo:</label><select name='infant_sex_"+i+"' id='infant_sex_"+i+"'><option id='masculino'>Masculino</option><option id='femenino'>Femenino</option></select></div></div><br>").appendTo("#passengers_container");
+		$("<div id='infant"+i+"'class='inner_box passenger_div'><h3 id='passenger_title'>Pasajero infante "+i+"</h3><div class='input_div'><label>Nombre:</label><input type='text' name='infant_name_"+i+"' id='infant_name_"+i+"'><br><label>Apellido:</label><input type='text' name='infant_surname_"+i+"' id='infant_surname_"+i+"'><br><label>Fecha de nacimiento:</label><input type='text' name='infant_birth_"+i+"' id='infant_birth_"+i+"'><br><label>DNI:</label><input type='text' name='infant_dni_"+i+"' id='infant_dni_"+i+"'><br></div></div><br>").appendTo("#passengers_container");
 	}
 	//buy tickets
-	$( "#confirm" ).click(function() {
+	$( "#confirm" ).click(function() {	
 		for(var i=1;i<=adult_quant;i++){
 			jsonData['passengers'][i-1]['firstName']= $("#adult_name_"+i).val();
 			jsonData['passengers'][i-1]['lastName']= $("#adult_surname_"+i).val();
@@ -84,8 +84,8 @@ function validate(jsonData){
 		beforeSend: function(){
 			loading();
 		},
-		complete: function(data){
-			if(data['statusText']=="success"){
+		success: function(data){
+			if(data['valid']){
 				buy(jsonData);
 			}
 		},
@@ -99,7 +99,7 @@ function validateFinish(data){
 	var loadDiv = $("#container").children("#loading");
 	loadDiv.delay(800).hide(800);
 	if(data.hasOwnProperty("error")){
-		$("#container").append("<br><div class='inner_box' id='error'><h3>Error "+data.error.code+": "+data.error.message+"</h3></div>");
+		$("#container").append("<div class='inner_box' id='error'><h3>Error "+data.error.code+": "+data.error.message+"</h3></div>");
 		var errorDiv = $("#container").children("#error");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);
@@ -115,22 +115,22 @@ function validateFinish(data){
 		var errorDiv = $("#container").children("#no_comments");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);
-		return false;
+		return true;
 	}
 }
 
-function buy(data){
-	console.log(JSON.stringify(data));
+function buy(jsonData){	
+	console.log("lo que llego a buy:");
+	console.log(JSON.stringify(jsonData));
+	// llega bien el json pero falla algo de la solicitud!!!
 	$.ajax({
-		url: "http://eiffel.itba.edu.ar/hci/service2/Review.groovy?method=ReviewAirline",
-		data: { data: JSON.stringify(objJson) },
+		url: "http://eiffel.itba.edu.ar/hci/service2/Booking.groovy?method=BookFlight",
+		data: { data: JSON.stringify(jsonData) },
 		dataType: "jsonp",
 		contentType: "application/json",
+		jsonpCallback: "done",
 		beforeSend: function(){
 			loading();
-		},
-		success: function(data){
-			done(data);
 		},
 		error: function(error){
 			console.log(error);
@@ -145,24 +145,24 @@ function loading(){
 	return;
 }
 
-function done(data){
-	var loadDiv = $("#container_box").children("#loading");
-	loadDiv.delay(800).hide(800);	
-	if(data.hasOwnProperty("error")){
-		$("#container_box").append("<br><div class='inner_box' id='search_error'><h3>Error "+data.error.code+": "+data.error.message+"</h3></div>");
-		var errorDiv = $("#container_box").children("#search_error");
+function done(jsonData){
+	var loadDiv = $("#container").children("#loading");
+	loadDiv.delay(800).hide(800);
+	if(jsonData.hasOwnProperty("error")){
+		$("#container").append("<div class='inner_box' id='search_error'><h3>Error "+jsonData.error.code+": "+jsonData.error.message+"</h3></div>");
+		var errorDiv = $("#container").children("#search_error");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);
 		return;
 	}
-	if(!data['booking']){
-		$("#container_box").append("<div id='fail' class='inner_box'><h3>La compra no pudo ser realizada<br>Disculpe las molestias ocasionadas</h3></div><br>");
-		var errorDiv = $("#container_box").children("#fail");
+	if(!jsonData['booking']){
+		$("#container").append("<div id='fail' class='inner_box'><h3>La compra no pudo ser realizada<br>Disculpe las molestias ocasionadas</h3></div>");
+		var errorDiv = $("#container").children("#fail");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);
-	}else{
-		$("#container_box").append("<div id='success' class='inner_box'><h3>La compra ha sido un éxito<br>Disfrute de su vuelo</h3></div><br>");
-		var success_div = $("#container_box").children("#success");
+	}else if(jsonData['booking']){
+		$("#container").append("<div id='success' class='inner_box'><h3>La compra ha sido un éxito<br>Disfrute de su vuelo</h3></div>");
+		var success_div = $("#container").children("#success");
 		success_div.hide(0).delay(1000);
 		success_div.fadeIn(500);	
 	}
