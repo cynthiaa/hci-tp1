@@ -123,10 +123,9 @@ function buy(data){
 	console.log(JSON.stringify(data));
 	$.ajax({
 		url: "http://eiffel.itba.edu.ar/hci/service2/Review.groovy?method=ReviewAirline",
-		data: JSON.stringify(data),
-		dataType: "json",
-		contentType: "application/json",			
-		type: "POST",
+		data: { data: JSON.stringify(objJson) },
+		dataType: "jsonp",
+		contentType: "application/json",
 		beforeSend: function(){
 			loading();
 		},

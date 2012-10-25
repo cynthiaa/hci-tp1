@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 function sendCommentQuery(airline, flight, amability, food, punctuality, frequent_passenger, comfort, price_quality, recommend, comments){
-	//alert("http://eiffel.itba.edu.ar/hci/service2/Review.groovy?method=ReviewAirline&airlineId="+airline+"&flightNumber="+flight+"&friendlinessRating="+amability+"&foodRating="+food+"&punctualityRating="+punctuality+"&mileageProgramRating="+frequent_passenger+"&comfortRating="+comfort+"&qualityPriceRating="+price_quality+"&yesRecommend="+recommend+"&comments="+comments);
+
 	var objJson = {"airlineId": "IB","flightNumber": 6831, "friendlinessRating": 8,"foodRating": 9,"punctualityRating": 9,"mileageProgramRating": 6, "comfortRating": 9, "qualityPriceRating": 7, "yesRecommend": true, "comments": ""}
 	objJson.airlineId = airline;
 	objJson.flight = flight;
@@ -18,18 +18,17 @@ function sendCommentQuery(airline, flight, amability, food, punctuality, frequen
 	objJson.qualityPriceRating = price_quality;
 	objJson.yesRecommend = recommend;
 	objJson.comments = comments;
-	alert(JSON.stringify(objJson));
+	console.log(JSON.stringify(objJson));
 	$.ajax({
-		url: "http://eiffel.itba.edu.ar/hci/service2/Review.groovy?method=ReviewAirline",
-		data: JSON.stringify(objJson),
-		dataType: "json",
-		contentType: "application/json",			
-		type: "POST",
+		url: "http://eiffel.itba.edu.ar/hci/service2/Review.groovy?method=ReviewAirline2",
+		data: { data: JSON.stringify(objJson) },
+		dataType: "jsonp",
+		contentType: "application/json",
 		beforeSend: function(){
 			loading();
 		},
 		success: function(data){
-			alert("piola vago");
+			console.log(data);
 		},
 		error: function(error){
 			console.log(error);
