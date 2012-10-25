@@ -4,6 +4,12 @@ body {
 	background-color: #E8F2F6;
 	font-family: Arial;
 	}
+	
+textarea {
+    resize: none;
+	border: 1px solid #0095cd;
+}
+
 table
 {
 	border-collapse:collapse;
@@ -208,6 +214,8 @@ display: block
 #comment_col{
 	width:55%;
 	vertical-align: top;
+	max-width: 275px;
+	word-wrap: break-word;
 }
 #price a{
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);

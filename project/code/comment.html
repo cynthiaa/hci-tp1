@@ -9,93 +9,95 @@
 	<link href="css/cupertino/jquery-ui-1.9.0.custom.css" rel="stylesheet">
 	
     <script src="js/jquery-1.8.2.js" type="text/javascript"/></script>
-	<script src="js/jquery-ui-1.9.0.custom.js" type="text/javascript"/></script>
-	<script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"/></script>
-	<script src="js/jquery.validate.js" type="text/javascript"/></script>
+	<script src="js/send-comment.js" type="text/javascript"/></script>
 </head>
 <body>
         <div id="wrap" >
             <div id="header">
-                <select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-                    <option value="link pagina 1">Español</option>>
-                    <option value="link pagina 2">Inglés</option> 
+                <select name="selCombo" size=1 onChange="javascript:alert('AÃºn no disponible');"> 
+                    <option value="link pagina 1">EspaÃ±ol</option>>
+                    <option value="link pagina 2">InglÃ©s</option> 
                 </select> 
             </div>
 	        <div id="logo" >
                 <h1>Despejar.com</h1>
             </div>
-            <div class="container thinner">
+            <div id="container_box" class="container thinner">
                 <div class="inner_box">
 					<h3>Comentar vuelo</h3>
 					<form>
 					<div class="input_div">
 						<label>Nombre de la aerolinea:</label>
-						<input type="text" name="airline"><br>
-						<label>Número de vuelo:</label>
-						<input type="text" name="flight_number"><br>
+						<input type="text" name="airline" id="airline"><br>
+						<label>NÃºmero de vuelo:</label>
+						<input type="text" name="flight_number" id="flight_number"><br>
 					</div>
 					<div id="select_div">
 						<label>Amabilidad:</label>
-						<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-							<option value="rate_1">1</option>
-							<option value="rate_2">2</option>
-							<option value="rate_3">3</option>
-							<option value="rate_4">4</option>
-							<option value="rate_5">5</option>
+						<select name="selCombo" size=1 id="amability"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
 						</select><br>
 						<label>Comida:</label>
-						<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-							<option value="rate_1">1</option>
-							<option value="rate_2">2</option>
-							<option value="rate_3">3</option>
-							<option value="rate_4">4</option>
-							<option value="rate_5">5</option>
+						<select name="selCombo" size=1 id="food"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
 						</select><br>
 						<label>Puntualidad:</label>
-						<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-							<option value="rate_1">1</option>
-							<option value="rate_2">2</option>
-							<option value="rate_3">3</option>
-							<option value="rate_4">4</option>
-							<option value="rate_5">5</option>
+						<select name="selCombo" size=1 id="punctuality"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
 						</select><br>
 						<label>Programa de viajeros frecuentes:</label>
-						<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-							<option value="rate_1">1</option>
-							<option value="rate_2">2</option>
-							<option value="rate_3">3</option>
-							<option value="rate_4">4</option>
-							<option value="rate_5">5</option>
+						<select name="selCombo" size=1 id="frequent_passenger"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
 						</select><br>
 						<label>Confort:</label>
-						<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-							<option value="rate_1">1</option>
-							<option value="rate_2">2</option>
-							<option value="rate_3">3</option>
-							<option value="rate_4">4</option>
-							<option value="rate_5">5</option>
+						<select name="selCombo" size=1 id="comfort"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
 						</select><br>
-						<label>Relación precio/calidad</label>
-						<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-							<option value="rate_1">1</option>
-							<option value="rate_2">2</option>
-							<option value="rate_3">3</option>
-							<option value="rate_4">4</option>
-							<option value="rate_5">5</option>
+						<label>RelaciÃ³n precio/calidad</label>
+						<select name="selCombo" size=1 id="price_quality"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
 						</select><br>
 						<label>Lo recomendaria a otro:</label>
-						<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-							<option value="rate_1">1</option>
-							<option value="rate_2">2</option>
-							<option value="rate_3">3</option>
-							<option value="rate_4">4</option>
-							<option value="rate_5">5</option>
+						<select name="selCombo" size=1 id="recommend"> 
+							<option>Si</option>
+							<option>No</option>
 						</select><br>
 					</div>
+				</div>
+				<br>
+				<div class="inner_box">
 					<h3>Otros comentarios</h3>
-					<textarea id= "comentario" name="comentario" rows="10" cols="30"></textarea>
+					<textarea id= "comments" name="comentario" rows="10" cols="30"></textarea>
 					</form>
-				</div>	     
+				</div>			
+				<br>
+				<div class="inner_box">
+				<a id="send" class="button">Enviar comentario</a>
+				</div>
             </div>
 			<div id="footer">
                     <h5>Despejar.com© Casi todos los derechos reservados</h5>

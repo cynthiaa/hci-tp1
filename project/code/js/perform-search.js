@@ -7,7 +7,8 @@ $(document).ready(function() {
 	var child_num = getQuerystring('kids_num');
 	var infant_num = getQuerystring('infants_num');
 	//aca viene la llamada de ajax
-	var flights = retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, "total", "asc");
+	getCommentsDiv("by_flight", "6593", "8R", ("body"));
+	//retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, "total", "asc");
 });
 
 function getQuerystring(key, default_)
@@ -174,8 +175,9 @@ function displayFlights(flights){
 				price_div.css({"height":"140px", "padding":"5px 0px 0px 0px"});
 				outbound_div.css({"padding":"10px 0px 0px 0px"});
 			}
-			var flight_price = $("<div id='flight_price'><p><h3>Desglose de precio</h3></p><p><table><tr><th>Por adultos</th><th>Por ninos</th><th>Por infantes</th><th>Por impuestos</th><th>Por cargas</th></tr><tr><td>"+adult_price+"</td><td>"+child_price+"</td><td>"+infant_price+"</td><td>"+tax+"</td><td>"+charges+"</td></tr></table></p><p><h3>Total: "+total+"</h3></p><a class='volver'>< volver ></a></div>").appendTo(new_div);
-			
+			var flight_price = $("<div id='flight_price'><p><h3>Desaglose de precio</h3></p><p><table><tr><th>Por adultos</th><th>Por ninos</th><th>Por infantes</th><th>Por impuestos</th><th>Por cargas</th></tr><tr><td>"+adult_price+"</td><td>"+child_price+"</td><td>"+infant_price+"</td><td>"+tax+"</td><td>"+charges+"</td></tr></table></p><p><h3>Total: "+total+"</h3></p><a class='volver'>< volver ></a></div>").appendTo(new_div);
+
+			//var comments_div = $(").appendTo(new_div);
 			// hide divs
 			flight_price.hide(0);
 			$(".result").hide(0);			
@@ -195,9 +197,7 @@ function attachClickEvent(){
 				var result_div = $( this ).parents("#result");
 					if(result_div.children( "#flight_info" ).is(':visible'))
 						result_div.children( "#price" ).animate({"height":"155px", "padding":"25px 0px 0px 0px"});
-						result_div.children( "#flight_info" ).fadeOut(500);
-					//if(result_div.children( "#flight_comments" ).is(':visible'))
-					//	result_div.children( "#flight_comments" ).fadeOut(500);				
+						result_div.children( "#flight_info" ).fadeOut(500);		
 				result_div.children( "#flight_price" ).delay(600).fadeIn(1000);
 			});
 			
@@ -205,9 +205,7 @@ function attachClickEvent(){
 			var result_div = $( this ).parents("#result");
 			if(result_div.children( "#flight_price" ).is(':visible'))
 				result_div.children( "#price" ).animate({"height":"140", "padding":"10px 0px 0px 0px"}, 1000);
-				result_div.children( "#flight_price" ).fadeOut(500);
-			//if(result_div.children( "#flight_comments" ).is(':visible'))
-			//	result_div.children( "#flight_comments" ).fadeOut(500);				
+				result_div.children( "#flight_price" ).fadeOut(500);		
 			result_div.children( "#flight_info" ).delay(600).fadeIn(1000);
 			});
 }	
