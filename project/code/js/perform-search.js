@@ -215,7 +215,7 @@ function displayFlights(flights, path){
 				inbound_flight_info_query = "&inbound_flight_number="+inbound_flight_number+"&inbound_cabin_type="+inbound_cabin_type+"&inbound_airline_name="+inbound_airline_name+"&inbound_airline_rating="+inbound_airline_rating+"&inbound_duration="+inbound_duration;	
 			}				
 
-			var stopovers_query = "?path="+path+"&stopovers="+stopovers;			
+			var stopovers_query = "&stopovers="+stopovers;			
 			
 			var buy_query = path_query+""+flight_price_query+""+outbound_arrival_city_query+""+inbound_arrival_city_query+""+outbound_departure_city_query+""+inbound_departure_city_query+""+outbound_flight_info_query+""+inbound_flight_info_query+""+stopovers_query;		
 

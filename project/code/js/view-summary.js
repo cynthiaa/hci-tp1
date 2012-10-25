@@ -25,10 +25,11 @@ $(document).ready(function() {
 	var outbound_departure_city = qs.value('outbound_departure_city');
 	var outbound_departure_country = qs.value('outbound_departure_country');
 	// flight data
-	var outbound_flight_number = qs.value('outbound_departure_country');
-	var outbound_cabin_type = qs.value('outbound_departure_country');
-	var outbound_airline_name = qs.value('outbound_departure_country');
-	var outbound_airline_rating = qs.value('outbound_departure_country');
+	var outbound_flight_number = qs.value('outbound_flight_number');
+	var outbound_cabin_type = qs.value('outbound_cabin_type');
+	var outbound_airline_name = qs.value('outbound_airline_name');
+	var outbound_airline_rating = qs.value('outbound_airline_rating');
+	var outbound_duration = qs.value('outbound_duration');
 	// flight arrival information
 	var	inbound_arrival_date = qs.value('inbound_arrival_date');
 	var	inbound_arrival_timezone = qs.value('inbound_arrival_timezone');
@@ -42,10 +43,11 @@ $(document).ready(function() {
 	var inbound_departure_city = qs.value('inbound_departure_city');
 	var inbound_departure_country = qs.value('inbound_departure_country');
 	// flight data
-	var inbound_flight_number = qs.value('inbound_departure_country');
-	var inbound_cabin_type = qs.value('inbound_departure_country');
-	var inbound_airline_name = qs.value('inbound_departure_country');
-	var inbound_airline_rating = qs.value('inbound_departure_country');
+	var inbound_flight_number = qs.value('inbound_flight_number');
+	var inbound_cabin_type = qs.value('inbound_cabin_type');
+	var inbound_airline_name = qs.value('inbound_airline_name');
+	var inbound_airline_rating = qs.value('inbound_airline_rating');
+	var inbound_duration = qs.value('inbound_duration');
 	// extra
 	var idaString = (path == "twoWay")? ": ida": "";
 	
@@ -70,12 +72,13 @@ $(document).ready(function() {
 	$("#outbound_departure_timezone").text(outbound_departure_timezone);
 	$("#outbound_departure_airport").text(outbound_departure_airport);
 	$("#outbound_departure_city").text(outbound_departure_city);
-	$("#outbound_arrival_country").text(outbound_arrival_country);	
+	$("#outbound_departure_city").text(outbound_departure_city);	
 	
 	$("#outbound_flight_number").text(outbound_flight_number);
 	$("#outbound_cabin_type").text(outbound_cabin_type);
 	$("#outbound_airline_name").text(outbound_airline_name);
 	$("#outbound_airline_rating").text(outbound_airline_rating);
+	$("#outbound_duration").text(outbound_duration);
 	
 	if(path == "twoWay"){
 		$("#outbound_title").text("Resumen de vuelo: ida");
@@ -96,6 +99,7 @@ $(document).ready(function() {
 		$("#inbound_cabin_type").text(inbound_cabin_type);
 		$("#inbound_airline_name").text(inbound_airline_name);
 		$("#inbound_airline_rating").text(inbound_airline_rating);
+		$("#inbound_duration").text(outbound_duration);
 	}else{
 		$("#outbound_title").text("Resumen de vuelo");
 		$("#inbound_box").next().remove();
