@@ -24,15 +24,9 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-		$("#search_button").click(function () {	
+		$("#initial_search").click(function () {	
 			if (!$("#search_form").valid())
-                alert("Error en el formulario. Revise los parametros resaltados.");
-			else
-				return;
+                alert("Error en el formulario. Revise los elementos resaltados.");
+			return;
         });
-});
-
-$(document).ready(function() {
-	$("#departure_date").prop("readonly",true);
-	$("#return_date").prop("readonly",true);
 });

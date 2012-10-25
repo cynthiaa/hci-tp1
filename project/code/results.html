@@ -33,41 +33,41 @@
                 <div id="search" class="inner_box">
                     <h3>Búsqueda de vuelos</h3>
                     <form id="search_form">
-						Origen:<br><input type="text" placeholder="Aeropuerto de origen" name="origin"><br>
-						Destino:<br><input type="text" placeholder="Aeropuerto de destino" name="destination"><br>
+						Origen:<br><input type="text" placeholder="Aeropuerto de origen" id="origin" name="origin"><br>
+						Destino:<br><input type="text" placeholder="Aeropuerto de destino" id="destination" name="destination"><br>
 						Partida:<br><input type="text" placeholder="Fecha de partida" id="departure_date" name="departure_date"><br>
 						Destino:<br><input type="text" placeholder="Opcional si es solo de ida" id="return_date" name="return_date"><br>
 						Adultos:<br>
-						<select name="adults_num">
-							<option value="1adults" selected="selected">1</option>
-							<option value="2adults">2</option>
-							<option value="3adults">3</option>
+						<select name="adults_num" id="adults_num">
+							<option selected="selected">1</option>
+							<option>2</option>
+							<option>3</option>
 						</select>
 						<br>Niños:<br>
-						<select name="kids_num">
-							<option value="1kids" selected="selected">1</option>
-							<option value="2kids">2</option>
-							<option value="3kids">3</option>
+						<select name="kids_num" id="kids_num">
+							<option selected="selected">1</option>
+							<option>2</option>
+							<option>3</option>
 						</select>
 						<br>Infantes:<br>
-						<select name="infants_num">
-							<option value="1infants" selected="selected">1</option>
-							<option value="2infants">2</option>
-							<option value="3infants">3</option>
+						<select name="infants_num" id="infants_num">
+							<option selected="selected">1</option>
+							<option>2</option>
+							<option>3</option>
 						</select><br>
 						<br>
-						<a id="search_button" class="button" href="results.html">Buscar vuelos</a><br>
+						<a id="search_flights" class="button">Buscar vuelos</a><br>
                     </form>
                 </div>
 				<div id="main">
 					<div id="order_criteria">
 						<p>
 						Ordenar por 
-						<select name="order_by">
-							<option value="price" selected="selected">Precio</option>
-							<option value="scales">Escalas</option>
-							<option value="airline">Aerolinea</option>
-							<option value="duration">Duracion</option>
+						<select id="sort_key" name="order_by">
+							<option selected="selected">Precio</option>
+							<option>Escalas</option>
+							<option>Aerolinea</option>
+							<option>Duracion</option>
 						</select>
 						</p>
 					</div>

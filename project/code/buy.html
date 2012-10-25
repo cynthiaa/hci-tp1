@@ -25,121 +25,65 @@
                 <h1>Despejar.com</h1>
             </div>
             <div class="container thinner">
-                <div class="inner_box">
-					<h3>Resumen del vuelo</h3>
-					<table>
-						<tr> 
-							<th>Precio por adulto</th>
-							<th>Cantidad de adultos</th>
-						</tr>
-						<tr>
-							<td>120$</td>
-							<td>1</td>
-						</tr>
-					</table>
-					<table>
-						<tr> 
-							<th>Precio por niño</th>
-							<th>Cantidad de niños</th>
-						</tr>
-						<tr>
-							<td>120$</td>
-							<td>1</td>
-						</tr>
-					</table>
-					<table>
-						<tr> 
-							<th>Precio por infantes</th>
-							<th>Cantidad de infantes</th>
-						</tr>
-						<tr>
-							<td>120$</td>
-							<td>1</td>
-						</tr>
-					</table>
-					<table>
-						<tr> 
-							<th>Impuestos y cargos</th>
-						</tr>
-						<tr>
-							<td>120$</td>
-						</tr>
-					</table>
-					<table>
-						<tr> 
-							<th>Precio total</th>
-						</tr>
-						<tr>
-							<td>120$</td>
-						</tr>
-					</table>
-					<table>
-						<tr> 
-							<th>Aerolinea</th>
-						</tr>
-						<tr>
-							<td>Lapa</td>
-						</tr>
-					</table>
-					<table>
-						<tr> 
-							<th>Fecha de partida</th>
-							<th>Horario de salida</th>
-							<th>Horario de llegada</th>
-							<th>Cantidad de escalas</th>
-						</tr>
-						<tr>
-							<td>12/10/2012</td>
-							<td>21:00</td>
-							<td>23:00</td>
-							<td>3</td>
-						</tr>
-					</table>
-					<table>
-						<tr> 
-							<th>Número de vuelo</th>
-						</tr>
-						<tr>
-							<td>125300ABR</td>
-						</tr>
-					</table>
-				</div>
-				<br>
-				<div class="inner_box">
-					<h3>Pasajero 1</h3>
-						<form>
-						<div class="input_div">
-						<label>Nombre:</label>
-						<input type="text" name="name"><br>
-						<label>Apellido:</label>
-						<input type="text" name="surname"><br>
-						<label>Fecha de nacimiento:</label>
-						<input type="text" name="date_birth"><br>
-						<label>Sexo:</label>
-							<select name="sex">
-								<option value="male" selected="selected">Masculino</option>
-								<option value="female">Femenino</option>
-								<option value="others">Torta/Gay/Trava</option>
-							</select>
-						</div>
-						</form>
-				</div>
-				<br>
-				<div class="inner_box">
-					<h3>Tarjeta de crédito</h3>
-					<form>
+			<div id="passengers_container">
+				<div class="inner_box passenger_div">
+				<form>
+					<h3 id="passenger_title">Pasajero</h3>
 						
 						<div class="input_div">
+						<label>Nombre:</label>
+						<input type="text" name="name" id="name"><br>
+						<label>Apellido:</label>
+						<input type="text" name="surname" id="surname"><br>
+						<label>Fecha de nacimiento:</label>
+						<input type="text" name="date_birth" id="date_birth"><br>
+						<label>DNI:</label>
+						<input type="text" name="documento" id="documento"><br>
+						<label>Sexo:</label>
+							<select name="sex">
+								<option id="masculino" selected="selected">Masculino</option>
+								<option id="femenino">Femenino</option>
+							</select>
+						</div>								
+				</div>
+				<br>
+				</div>				
+				<div class="inner_box">
+					<h3>Tarjeta de crédito</h3>
+					<form>						
+						<div class="input_div">
 						<label>Número:</label>
-						<input type="text" name="mail"><br>
+						<input type="text" name="mail" id="mail"><br>
 						<label>Fecha de vencimiento:</label>
-						<input type="text" name="expire"><br>
+						<input type="text" name="expire" id="expire"><br>
 						<label>Código de seguridad:</label>
-						<input type="text" name="security_code"><br>
-						<label>Nombre y apellido del titular:</label>
-						<input type="text" name="titular_name"><br>
+						<input type="text" name="security_code" id="security_code"><br>
+						<label>Nombre del titular:</label>
+						<input type="text" name="titular_name" id="titular_name"><br>
+						<label>Apellido del titular:</label>
+						<input type="text" name="titular_surname" id="titular_surname"><br>
 						<label>DNI del titular:</label>
-						<input type="text" name="dni"><br>
+						<input type="text" name="dni" id="dni"><br>
+						</div>
+					</form>
+				</div>
+				<br>
+				<div class="inner_box">
+					<h3>Facturacion</h3>
+					<form>						
+						<div class="input_div">
+						<label>Pais:</label>
+						<input type="text" name="country" id="country"><br>
+						<label>Provincia:</label>
+						<input type="text" name="state" id="state"><br>
+						<label>Código postal:</label>
+						<input type="text" name="postal_code" id="postal_code"><br>
+						<label>Dirección:</label>
+						<input type="text" name="address" id="address"><br>
+						<label>Piso:</label>
+						<input type="text" name="floor" id="floor"><br>
+						<label>Departamento:</label>
+						<input type="text" name="apartment" id="apartment"><br>
 						</div>
 					</form>
 				</div>
@@ -149,11 +93,13 @@
 					<form>
 						<div class="input_div">
 						<label>Dirección de e-mail:</label>
-						<input type="text" name="mail"><br>
+						<input type="text" name="mail" id="mail"><br>
+						<label>Telefono:</label>
+						<input type="text" name="telephone" id="telephone"><br>
 						</div>
 					</form>
-					<br>						
-					<a class="button" onClick="javascript:alert('Aún no disponible');">Confirmar</a>
+					<br>			
+					<a class="button" id="confirm">Confirmar</a>
                 </div>			     
             </div>
 			<div id="footer">

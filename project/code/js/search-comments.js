@@ -2,22 +2,7 @@ $(document).ready(function() {
 	var method = getQuerystring('method');
 	var flight = getQuerystring('flight_number');
 	var airline = getQuerystring('airline_id');
-	//aca viene la llamada de ajax	
 	commentQuery(method, flight, airline);
-	//retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, "total", "asc");
-	
-	$( ".comments" ).click(function() {
-			var result_div = $( this ).parents("#result");
-            result_div.children( "#flight_info" ).fadeOut(500);
-			if($(this).is("#airline")){
-				// procesar comentarios de aerolinea
-			}
-			else{
-				// procesar comentarios de vuelo
-			}
-			result_div.children( "#flight_comments" ).delay(600).fadeIn(1000);
-            return false;
-        });
 });
 
 function getQuerystring(key, default_)
@@ -81,7 +66,7 @@ function addComments(data){
 		return;
 	}
 	if(data['total']==0){
-		$("#all_comments").append("<div id='no_comments' class='inner_box'><h3>No hay comentarios para mostrar</h3></div><br>");
+		$("#all_comments").append("<div id='no_comments' class='inner_box'><h3>No hay comentarios disponibles</h3></div><br>");
 		var errorDiv = $("#all_comments").children("#no_comments");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);
@@ -108,27 +93,3 @@ function addComments(data){
 	}
 	return;
 }
-
-
-function attachClickEvent(){
-	//agrego un handler dinamicamente
-			$( ".view_price_detail" ).live("click", function() {
-				var result_div = $( this ).parents("#result");
-					if(result_div.children( "#flight_info" ).is(':visible'))
-						result_div.children( "#price" ).animate({"height":"155px", "padding":"25px 0px 0px 0px"});
-						result_div.children( "#flight_info" ).fadeOut(500);
-					//if(result_div.children( "#flight_comments" ).is(':visible'))
-					//	result_div.children( "#flight_comments" ).fadeOut(500);				
-				result_div.children( "#flight_price" ).delay(600).fadeIn(1000);
-			});
-			
-			$( ".volver" ).live("click", function() {
-			var result_div = $( this ).parents("#result");
-			if(result_div.children( "#flight_price" ).is(':visible'))
-				result_div.children( "#price" ).animate({"height":"140", "padding":"10px 0px 0px 0px"}, 1000);
-				result_div.children( "#flight_price" ).fadeOut(500);
-			//if(result_div.children( "#flight_comments" ).is(':visible'))
-			//	result_div.children( "#flight_comments" ).fadeOut(500);				
-			result_div.children( "#flight_info" ).delay(600).fadeIn(1000);
-			});
-}	
