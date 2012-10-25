@@ -1,0 +1,24 @@
+<language>
+	<name>Español</name>
+	<search>
+		<search_flight>Buscar vuelo</search_flight>
+		<deals>Promociones</deals>
+		<comment_flight>Comentar vuelo</comment_flight>
+		<about_us>Sobre nosotros</about_us>
+		<search_label>Búsqueda de vuelos</search_label>
+		<origin_label>Origen:</origin_label>
+		<origin>Aeropuerto de origen</origin>
+		<destination_label>Destino:</destination_label>
+		<destination>Aeropuerto de destino</destination>
+		<depart_label>Partida:</depart_label>
+		<departure_date> Fecha de partida</departure_date>
+		<return_label>Regreso:</return_label>
+		<return_date>Sólo para ida y vuelta</return_date>
+		<adults_selectQ>Adultos (11 años o más) </adults_selectQ>
+		<kids_selectQ>Niños	(de 2 a 11 años) </kids_selectQ>
+		<inf_selectQ>Infantes (de 0 a 2 años) </inf_selectQ>
+		<initial_search>Search! </initial_search>
+		<initial_search>Buscar! </initial_search>
+	</search>
+	<footer_text> Despejar.com© Casi todos los derechos reservados</footer_text>
+</language>

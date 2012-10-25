@@ -1,0 +1,23 @@
+<language>
+	<name>English</name>
+	<search>
+		<search_flight>Search flight</search_flight>
+		<deals>Deals</deals>
+		<comment_flight>Comment flight</comment_flight>
+		<about_us>About us</about_us>
+		<search_label>Flights search</search_label>
+		<origin_label>Origin:</origin_label>
+		<origin>Origin airport</origin>
+		<destination_label>Destination:</destination_label>
+		<destination>Destination airport</destination>
+		<depart_label>Departure:</depart_label>
+		<departure_date> Departure date</departure_date>
+		<return_label>Return:</return_label>
+		<return_date>Only for round trip</return_date>
+		<adults_selectQ>Adults (11 years or more) </adults_selectQ>
+		<kids_selectQ>Niños	(from 2 to 11 years) </kids_selectQ>
+		<inf_selectQ>Infantes (from 0 to 2 years) </inf_selectQ>
+		<initial_search>Search! </initial_search>
+	</search>
+	<footer_text> Despejar.com© Almost all rights reserved</footer_text>
+</language>

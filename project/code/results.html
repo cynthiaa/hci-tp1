@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Despejar.com El mejor precio para tu viaje</title>
+    <title>Despejar.com</title>
     <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/> 
 	<link href="css/cupertino/jquery-ui-1.9.0.custom.css" rel="stylesheet">
 	
@@ -17,11 +17,13 @@
 	<script src="js/date-range.js" type="text/javascript"/></script>
 	<script src="js/view-details.js" type="text/javascript"/></script>
 	<script src="js/perform-search.js" type="text/javascript"/></script>
+	<script src="js/language.js" type="text/javascript"/></script>
+	
 </head>
 <body>			
 		<div id="wrap" >
             <div id="header">
-					<select name="selCombo" onChange="javascript:alert('Aún no disponible');"> 
+					<select id="languageSelector" name="selCombo" size=1"> 
                     <option value="link pagina 1">Español</option>>
                     <option value="link pagina 2">English</option> 
                </select>
@@ -32,11 +34,19 @@
             <div class="container">
                 <div id="search" class="inner_box">
                     <h3>Búsqueda de vuelos</h3>
-                    <form id="search_form">
-						Origen:<br><input type="text" placeholder="Aeropuerto de origen" id="origin" name="origin"><br>
-						Destino:<br><input type="text" placeholder="Aeropuerto de destino" id="destination" name="destination"><br>
-						Partida:<br><input type="text" placeholder="Fecha de partida" id="departure_date" name="departure_date"><br>
-						Destino:<br><input type="text" placeholder="Opcional si es solo de ida" id="return_date" name="return_date"><br>
+                    <form id="search_form" action="results.html" method="get">
+						<p>
+						<div id="search_params">
+						<label id="origin_label" class="translate_" >Origen:</label><br>
+						<input id="origin" class="translate" type="text" placeholder="Aeropuerto de origen" name="origin"><br>
+						<label id="destination_label" class="translate" >Destino:</label><br>
+						<input id="destination" class="translate" type="text" placeholder="Aeropuerto de destino" name="destination"><br>
+						<label id="depart_label" class="translate">Partida:</label><br>
+						<input id="departure_date" class="translate" type="text" placeholder="Fecha de partida" id="departure_date"  name="departure_date" readonly="readonly"><br>
+						<label id="return_label" class="translate">Destino:</label><br>
+						<input id="return_date" class="translate" type="text" placeholder="Opcional si es solo de ida" id="return_date" name="return_date" readonly="readonly"><br>
+						</div>
+						</p>
 						Adultos:<br>
 						<select name="adults_num" id="adults_num">
 							<option selected="selected">1</option>

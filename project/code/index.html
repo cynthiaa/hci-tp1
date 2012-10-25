@@ -18,15 +18,16 @@
 	<script src="js/jquery.validate.wrapper.js" type="text/javascript"/></script>
 	<script src="js/validate-search.js" type="text/javascript"/></script>
 	<script src="js/date-range.js" type="text/javascript"/></script>
+	<script src="js/language.js" type="text/javascript"/></script>
 
 
 </head>
 <body>
         <div id="wrap" >
             <div id="header">
-				<select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-                    <option value="link pagina 1">Español</option>>
-                    <option value="link pagina 2">English</option> 
+				<select id="languageSelector" name="selCombo" size=1"> 
+                    <option value="ES">Español</option>>
+                    <option value="EN">English</option> 
                 </select>
             </div>
        </div>
@@ -34,32 +35,32 @@
             <h1>Despejar.com</h1>
         </div>
 		<div id="menu" class="container thinner">
-			<a class="button" href="results.html">Buscar vuelo</a> 
-			<a class="button" href="promotions.html">Promociones</a>
-			<a class="button" href="comment.html">Comentar vuelo</a> 			
-			<a class="button" href="about.html">Sobre nosotros</a> 
+			<a id="translate_search_flight" class="button" href="index.html">Buscar vuelo</a> 
+			<a id="translate_deals" class="button" href="promotions.html">Promociones</a>
+			<a id="translate_comment_flight" class="button" href="comment.html">Comentar vuelo</a> 			
+			<a id="translate_about_us" class="button" href="about.html">Sobre nosotros</a> 
 		</div>
 		<br>
         <div class="container thinner">
 			<div id="fix">
 				<div id="left_search" class="inner_box">
-					<h3>Búsqueda de vuelos</h3>
+					<h3 id="translate_search_label" class="translate">Búsqueda de vuelos</h3>
                     <form id="search_form" action="results.html" method="get">
 						<p>
 						<div id="search_params">
-						<label>Origen:</label>
-						<input type="text" placeholder="Aeropuerto de origen" name="origin"><br>
-						<label>Destino:</label>
-						<input type="text" placeholder="Aeropuerto de destino" name="destination"><br>
-						<label>Partida:</label>
-						<input type="text" placeholder="Fecha de partida" id="departure_date"  name="departure_date" readonly="readonly"><br>
-						<label>Destino:</label>
-						<input type="text" placeholder="Opcional si es solo de ida" id="return_date" name="return_date" readonly="readonly"><br>
+						<label id="origin_label" class="translate_" >Origen:</label>
+						<input id="origin" class="translate" type="text" placeholder="Aeropuerto de origen" name="origin"><br>
+						<label id="destination_label" class="translate" >Destino:</label>
+						<input id="destination" class="translate" type="text" placeholder="Aeropuerto de destino" name="destination"><br>
+						<label id="depart_label" class="translate">Partida:</label>
+						<input id="departure_date" class="translate" type="text" placeholder="Fecha de partida" id="departure_date"  name="departure_date" readonly="readonly"><br>
+						<label id="return_label" class="translate">Destino:</label>
+						<input id="return_date" class="translate" type="text" placeholder="Opcional si es solo de ida" id="return_date" name="return_date" readonly="readonly"><br>
 						</div>
 						</p>
 						<p>
 						<div id="passengers_ages">
-						<label>Adultos(11 años o más):</label>
+						<label id="adults_selectQ" class="translate" >Adultos(11 años o más):</label>
 						<select name="adults_num">
 							<option value="1" selected="selected">1</option>
 							<option value="2">2</option>
@@ -67,7 +68,7 @@
 							<option value="4">4</option>
 							<option value="5">5</option>
 						</select><br>
-						<label>Niños (de 2 a 11 años):</label>
+						<label id="kids_selectQ" class="translate">Niños (de 2 a 11 años):</label>
 						<select name="kids_num">
 							<option value="0" selected="selected">0</option>
 							<option value="1">1</option>
@@ -76,7 +77,7 @@
 							<option value="4">4</option>
 							<option value="5">5</option>
 						</select><br>
-						<label>Infantes (de 0 a 2 años):</label>
+						<label id="inf_selectQ" class="translate">Infantes (de 0 a 2 años):</label>
 						<select name="infants_num">
 							<option value="0" selected="selected">0</option>
 							<option value="1">1</option>
@@ -87,7 +88,7 @@
 						</select>
 						</div>
 						</p>
-						<input type="submit" id="initial_search" value="Buscar vuelos">
+						<input id="initial_search" class="translate" type="submit" value="Buscar vuelos">
                     </form>
                 </div>
 				<div id="picture" >
@@ -96,7 +97,7 @@
 			</div>
             </div>
 			<div id="footer">
-                    <h5>Despejar.com© Casi todos los derechos reservados</h5>
+                    <h5 id="footer_text" class="translate">Despejar.com© Casi todos los derechos reservados</h5>
             </div>
 </body>
 </html>
