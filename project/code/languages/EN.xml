@@ -182,6 +182,7 @@
 		<infant_quantity>Infants quantity</infant_quantity>
 		<charges_price1>Charge price</charges_price1>
 		<taxes_price>Taxes price</taxes_price>
+		<confirm>Buy</confirm>
 		
 	</summary>
 	<footer_text> Despejar.com© Almost all rights reserved</footer_text>
