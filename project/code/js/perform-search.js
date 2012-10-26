@@ -51,7 +51,8 @@ function loadCities(data){
             source: myCities
 	});
 	
-	$("#search_flights").click(function () {		
+	$("#search_flights").click(function () {	
+		alert("ASD"+translateElem("origin_error"));	
 		orig_name = $("#origin").val();
 		orig = myCitiesId[myCities.indexOf(orig_name)];
 		dest_name = $("#destination").val();
@@ -84,13 +85,13 @@ function loadCities(data){
 function valid_search(orig, dest, dep, ret){
 		var error_string = "";
 		if(orig == "")
-			error_string = error_string+"El lugar de origen es obligatorio.\n";
+			error_string = error_string+ translateElem("origin_error")+".\n";
 		if(dest == "")
-			error_string = error_string+"El lugar de destino es obligatorio.\n";
+			error_string = error_string+translateElem("destination_error")+.\n";
 		if(dep == "" || !checkdate(dep))
-			error_string = error_string+"El dia de partida es obligatorio.\n";
+			error_string = error_string+translateElem("departure_date_error")+.\n";
 		if(ret != "" && !checkdate(ret))
-			error_string = error_string+"El campo de llegada es obligatorio.\n";
+			error_string = error_string+translateElem("return_date_error")+.\n";
 		if(error_string != ""){
 			alert(error_string);
 			error_string = "";
@@ -132,7 +133,7 @@ function retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num,
 				loading();
 			},
             error: function(error) {
-                alert("Server retrieval has failed");
+                alert(translateElem("server_retrievel"));
 				return;
             }
         });
@@ -146,7 +147,7 @@ function retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num,
 				loading();
 			},
             error: function(error) {
-                alert("Server retrieval has failed");
+                alert(translateElem("server_retrievel"));
 				return;
             }
 		});

@@ -1,8 +1,8 @@
 <language>
 	<name>English</name>
 	<errors_and_messages>
-		<form_error> Form error. Please check the highlighted fields</form_error>
-		<server_retrievel>Server retrieval has failed</server_retrievel>
+		<form_error> Please check the highlighted fields</form_error>
+		<server_retrieval>Server retrieval has failed</server_retrieval>
 		<no_available_flights>No available flights</no_available_flights>
 		<origin_error>Wrong or missing origin</origin_error>
 		<destination_error>Wrong or missing destination</destination_error>

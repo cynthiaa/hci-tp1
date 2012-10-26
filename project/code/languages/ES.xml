@@ -1,5 +1,17 @@
 <language>
 	<name>Español</name>
+	<errors_and_messages>
+		<form_error> Revise los campos resaltados.</form_error>
+		<server_retrieval>El servidor de recuperación falló.</server_retrieval>
+		<no_available_flights>No hay vuelos disponibles para su búsqueda</no_available_flights>
+		<origin_error>El lugar de origen es obligatorio</origin_error>
+		<destination_error>El lugar de destino es obligatorio</destination_error>
+		<departure_date_error>El dia de partida es obligatorio</departure_date_error>
+		<return_date_error>El campo de llegada es obligatorio</return_date_error>
+		<comment_failure>No se pudo enviar su comentario. Disculpe las molestias ocasionadas</comment_failure>
+		<comment_failure>Can't send your comment. Sorry for the inconvenience</comment_failure>
+		
+	</errors_and_messages>
 	<search>
 		<search_flight>Buscar vuelo</search_flight>
 		<deals>Promociones</deals>
