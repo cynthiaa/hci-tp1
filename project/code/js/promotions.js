@@ -1,4 +1,5 @@
 $(document).ready(function() {
+		$("#map").hide(0)
 		$.ajax({
             url: "http://eiffel.itba.edu.ar/hci/service2/Geo.groovy?method=GetCities&page_size=40",
 			dataType: "jsonp",
@@ -9,6 +10,7 @@ $(document).ready(function() {
 function fillCitiesArray(data){
 	var myCities = new Array();
 	var myCitiesId = new Array();
+	var mapState = false;
 	if(!data.hasOwnProperty("error")){
 		for (var i=0;i<data['total'];i++){
 			myCities[i] = data['cities'][i]['name'];
@@ -36,21 +38,26 @@ function fillCitiesArray(data){
 			jsonpCallback: "offer_search",
         });
 	});	
+	
 }
 
 function loading(){
-	$("#container").append("<div id='loading'><p><img src='images/ajax-loader.gif'/></p></div>").hide(0);
-	$("#container").fadeIn(500).delay(500);
+	$("#search_box").fadeOut(500).delay(500);
 	return;
 }
 
-function offer_search(data){
-	$("#loading").delay(800).hide(800);
-	$("<br><div id='map_container'class='inner_box'><div id='map'></div></div>").appendTo("#container");
-	$("#map_container").hide(0).delay(1000);
-	$("#map_container").fadeIn(500);
-	//DIBUJO EL MAPITA
+function offer_search(data){	
+	$("#map").fadeIn(500).delay(1500);
 
+	var marker = new Array();
+	//DIBUJO EL MAPITA
+	var mapOptions = {
+		zoom: 1,
+		center: new google.maps.LatLng(0, 0),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	
 	//DIBUJO LAS MARQUITAS
 	for(var i=0; i<data['deals'].length; i++){
 		var offer_lat = data['deals'][i]['cityLatitude'];
@@ -59,7 +66,28 @@ function offer_search(data){
 		var cityName = data['deals'][i]['cityName'];
 		var countryId = data['deals'][i]['countryName'];
 		var price = data['deals'][i]['price'];
-		var monesa = data['currencyId'];
-		alert("oferta "+i+": "+cityName);
+		var moneda = data['currencyId'];
+		//alert("oferta "+i+": "+cityName);
+		marker[i] = createMarker(new google.maps.LatLng(offer_lat, offer_long), cityName+": "+price+""+moneda, map);
 	}
 }
+
+//var global para ver si hay algun abierta
+var curr_infw;
+
+//crea los markers
+function createMarker(point, content, map) {
+	var marker = new google.maps.Marker({
+		position: point,
+		map: map,
+	});
+	var infowindow = new google.maps.InfoWindow({
+		content: content
+	});
+	google.maps.event.addListener(marker, 'click', function() {
+	if(curr_infw) { curr_infw.close();}
+		curr_infw = infowindow; 
+		infowindow.open(map, marker);
+	});
+	return marker;
+};

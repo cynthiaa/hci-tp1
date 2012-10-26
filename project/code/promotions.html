@@ -11,6 +11,8 @@
 	<script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"/></script>
 	<script src="js/jquery-ui-1.9.0.custom.js" type="text/javascript"/></script>
 	<script src="js/promotions.js" type="text/javascript"/></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTU0aUmLT7PKhMVNy76M_-ltjokaGlstA&sensor=false">
+    </script>
 </head>
 <body>
         <div id="wrap" >
@@ -31,15 +33,17 @@
 		</div>
 		<br>
             <div id="container" class="container thinner">
-                <div id="search_box" class="inner_box">
+                <div class="inner_box">
+					<div id="search_box">
 					<h3>Promociones</h3>
 					<p>Introduce el nombre de tu ciudad y busca ofertas</p>
 					<form>
 						<input type="text" id="city_offers"/><br>
 						<a class="button" id="search_offers">Buscar ofertas</a>
 					</form>
-				</div>
-				
+					</div>
+					<div id='map'></div>
+				</div>				
             </div>
 			<div id="footer">
                     <h5 id="footer_text" class="translate">Despejar.com© Casi todos los derechos reservados</h5>

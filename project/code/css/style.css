@@ -53,6 +53,11 @@ h3{
 	text-align: center;
 }
 
+/* google maps */
+#map{
+	height: 300px;
+	width: 630px;
+}
 
 /* Language bar */
 #header {
