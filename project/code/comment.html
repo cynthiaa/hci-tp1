@@ -3,38 +3,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Despejar.com El mejor precio para tu viaje</title>
+    <title>Despejar.com</title>
 	
     <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/> 
 	<link href="css/cupertino/jquery-ui-1.9.0.custom.css" rel="stylesheet">
 	
     <script src="js/jquery-1.8.2.js" type="text/javascript"/></script>
+    <script src="js/language.js" type="text/javascript"/></script>
 	<script src="js/send-comment.js" type="text/javascript"/></script>
+	
+	
 </head>
 <body>
         <div id="wrap" >
             <div id="header">
-                <select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-                    <option value="link pagina 1">Español</option>>
-                    <option value="link pagina 2">Inglés</option> 
-                </select> 
+                <select id="languageSelector" name="selCombo" size=1"> 
+                    <option value="ES">Español</option>
+                    <option value="EN">English</option> 
+                </select>
             </div>
 	        <div id="logo" >
                 <h1>Despejar.com</h1>
             </div>
             <div id="container_box" class="container thinner">
                 <div class="inner_box">
-					<h3>Comentar vuelo</h3>
+					<h3 id="comment_flight" class="translate" >Comentar vuelo</h3>
 					<form>
 					<div class="input_div">
-						<label>Nombre de la aerolinea:</label>
-						<input type="text" name="airline" id="airline" placeholder="Id de la aerolinea"><br>
-						<label>Número de vuelo:</label>
-						<input type="text" name="flight_number" id="flight_number" placeholder="El numero de tu vuelo"><br>
+						<label id="airline_name_label" class="translate" >Nombre de la aerolinea:</label>
+						<input id="airline_name" class="translate" type="text" name="airline" id="airline" placeholder="Id de la aerolinea"><br>
+						<label id="flight_number_label" class="translate" >Número de vuelo:</label>
+						<input id="flight_number" class="translate" type="text" name="flight_number" id="flight_number" placeholder="El numero de tu vuelo"><br>
 					</div>
 					<div id="select_div">
-						<label>Amabilidad:</label>
-						<select name="selCombo" size=1 id="amability"> 
+						<label id="amability_label" class="translate">Amabilidad:</label>
+						<select  name="selCombo" size=1 id="amability"> 
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -45,7 +48,7 @@
 							<option>8</option>
 							<option>9</option>
 						</select><br>
-						<label>Comida:</label>
+						<label id="food_label" class="translate" >Comida:</label>
 						<select name="selCombo" size=1 id="food"> 
 							<option>1</option>
 							<option>2</option>
@@ -57,7 +60,7 @@
 							<option>8</option>
 							<option>9</option>
 						</select><br>
-						<label>Puntualidad:</label>
+						<label id="puntuality_label" class="translate" >Puntualidad:</label>
 						<select name="selCombo" size=1 id="punctuality"> 
 							<option>1</option>
 							<option>2</option>
@@ -69,7 +72,7 @@
 							<option>8</option>
 							<option>9</option>
 						</select><br>
-						<label>Programa de viajeros frecuentes:</label>
+						<label id="frequent_passenger_label" class="translate">Programa de viajeros frecuentes:</label>
 						<select name="selCombo" size=1 id="frequent_passenger"> 
 							<option>1</option>
 							<option>2</option>
@@ -81,7 +84,7 @@
 							<option>8</option>
 							<option>9</option>
 						</select><br>
-						<label>Confort:</label>
+						<label id="confort_label" class="translate" >Confort:</label>
 						<select name="selCombo" size=1 id="comfort"> 
 							<option>1</option>
 							<option>2</option>
@@ -93,7 +96,7 @@
 							<option>8</option>
 							<option>9</option>
 						</select><br>
-						<label>Relación precio/calidad</label>
+						<label id="price_quality_label" class="translate" >Relación precio/calidad</label>
 						<select name="selCombo" size=1 id="price_quality"> 
 							<option>1</option>
 							<option>2</option>
@@ -105,7 +108,7 @@
 							<option>8</option>
 							<option>9</option>
 						</select><br>
-						<label>Lo recomendaria a otro:</label>
+						<label id="recommend_label" class="translate" >Lo recomendaria a otro:</label>
 						<select name="selCombo" size=1 id="recommend"> 
 							<option>Si</option>
 							<option>No</option>
@@ -114,17 +117,17 @@
 				</div>
 				<br>
 				<div class="inner_box">
-					<h3>Otros comentarios</h3>
+					<h3 id="comments_label" class="translate">Otros comentarios</h3>
 					<textarea id= "comments" name="comentario" rows="10" cols="30" placeholder="Contanos tu experiencia"></textarea>
 					</form>
 				</div>			
 				<br>
 				<div class="inner_box">
-				<a id="send" class="button">Enviar comentario</a>
+				<a id="send" class="translate button">Enviar comentario</a>
 				</div>
             </div>
 			<div id="footer">
-                    <h5>Despejar.com© Casi todos los derechos reservados</h5>
+                    <h5 id="footer_text" class="translate" >Despejar.com© Casi todos los derechos reservados</h5>
             </div>
         </div>
 </body>
