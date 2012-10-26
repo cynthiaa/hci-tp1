@@ -1,5 +1,7 @@
 // estado de la barra de busqueda avanzada
 var filters_state = false;
+
+
 $(document).ready(function() {
 	$("#filters").hide(0);
 	qs= new QueryString()
@@ -30,7 +32,9 @@ function loadCities(data){
 	var child_num = qs.value('kids_num');
 	var infant_num = qs.value('infants_num');
 	var sort_key = "total";
-
+	var min_price = "";
+	var max_price = "";
+	var cabin = ""
 	
 	var myCities = new Array();
 	var myCitiesId = new Array();
@@ -44,7 +48,7 @@ function loadCities(data){
 	}
 	
 	//aca viene la llamada de ajax
-	retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
+	retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc", min_price, max_price, cabin);
 	
 	$( "#origin" ).autocomplete({
             source: myCities
@@ -64,9 +68,15 @@ function loadCities(data){
 		adult_num = $("#adults_num").val();
 		child_num = $("#kids_num").val();
 		infant_num = $("#infants_num").val();
-		if(valid_search(orig_name, dest_name, dep, ret)){
+		// si esta abierta la ventana de filtros
+		if(filters_state){
+			min_price = $("#price_from").val();
+			max_price = $("#price_to").val();;
+			cabin = $("#cabin_type").val();
+		}
+		if(valid_search(orig_name, dest_name, dep, ret, min_price, max_price)){
 			$("#all_results").empty();
-			retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
+			retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc", min_price, max_price, cabin);
 		}				
 	});
 	
@@ -80,23 +90,28 @@ function loadCities(data){
 		}else if($("#sort_key").val() == "Escalas"){
 			sort_key = "stopovers";
 		}		
-		retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
+		retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc", min_price, max_price, cabin);
 	});
 	
 	$("#advanced_filters").click(function () {	
 		if(filters_state){
 			$("#filters").hide(500);
-			$("#advanced_filters").val("< Busqueda avanzada>");
+			// reseteo cuando cierra
+			min_price = "";
+			max_price = "";
+			cabin = ""
+			$("#price_from").val("");
+			$("#price_to").val("");
+			$("#cabin_type").val("Turista");
 			filters_state = false;
 		}else{
 			$("#filters").show(500);
-			$("#advanced_filters").val("< Busqueda simple>");
 			filters_state = true;
 		}			
 	});
 }
 
-function valid_search(orig, dest, dep, ret){
+function valid_search(orig, dest, dep, ret, min_price, max_price){
 		var error_string = "";
 		if(orig == "")
 			error_string = error_string+ translateElem("origin_error")+".\n";
@@ -106,6 +121,15 @@ function valid_search(orig, dest, dep, ret){
 			error_string = error_string+translateElem("departure_date_error")+".\n";
 		if(ret != "" && !checkdate(ret))
 			error_string = error_string+translateElem("return_date_error")+".\n";
+		if(min_price != "" && isNaN(parseFloat(min_price))){
+				error_string = error_string+"El precio minimo debe ser un numero.\n";			
+		}
+		if(max_price != "" && isNaN(parseFloat(max_price))){
+				error_string = error_string+"El precio maximo debe ser un numero.\n";	
+		}
+		if(min_price != "" && max_price != "" && !isNaN(parseFloat(max_price)) && !isNaN(parseFloat(min_price)) && parseFloat(max_price)<parseFloat(min_price) ){
+				error_string = error_string+"El precio minimo debe ser menor al máximo.\n";	
+		}
 		if(error_string != ""){
 			alert(error_string);
 			error_string = "";
@@ -136,11 +160,11 @@ function checkdate(input){
 	}
 }
 
-function retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, page, sort_key, sort_order){
+function retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, page, sort_key, sort_order,min_price, max_price, cabin){
 	// one way flight
 	if (ret == ""){
 		$.ajax({
-            url: "http://eiffel.itba.edu.ar/hci/service2/Booking.groovy?method=GetOneWayFlights&from="+ orig +"&to="+ dest +"&dep_date="+ dep +"&adults="+ adult_num +"&children="+ child_num +"&infants="+ infant_num+"&sort_key="+ sort_key+"&sort_order="+sort_order,
+            url: "http://eiffel.itba.edu.ar/hci/service2/Booking.groovy?method=GetOneWayFlights&from="+ orig +"&to="+ dest +"&dep_date="+ dep +"&adults="+ adult_num +"&children="+ child_num +"&infants="+ infant_num+"&sort_key="+ sort_key+"&sort_order="+sort_order+"&min_price="+min_price+"&max_price="+max_price+"&cabin_type="+cabin,
 			dataType: "jsonp",
 			jsonpCallback: "oneWay",
 			beforeSend: function(){
@@ -154,7 +178,7 @@ function retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num,
 	}else{
 		//ida y vuelta
 		$.ajax({
-            url: "http://eiffel.itba.edu.ar/hci/service2/Booking.groovy?method=GetRoundTripFlights&from="+ orig +"&to="+ dest +"&dep_date="+ dep +"&ret_date="+ ret +"&adults="+ adult_num +"&children="+ child_num +"&infants="+ infant_num+"&sort_key="+ sort_key+"&sort_order="+sort_order,
+            url: "http://eiffel.itba.edu.ar/hci/service2/Booking.groovy?method=GetRoundTripFlights&from="+ orig +"&to="+ dest +"&dep_date="+ dep +"&ret_date="+ ret +"&adults="+ adult_num +"&children="+ child_num +"&infants="+ infant_num+"&sort_key="+ sort_key+"&sort_order="+sort_order+"&min_price="+min_price+"&max_price="+max_price+"&cabin_type="+cabin,
 			dataType: "jsonp",
 			jsonpCallback: "twoWay",
 			beforeSend: function(){
