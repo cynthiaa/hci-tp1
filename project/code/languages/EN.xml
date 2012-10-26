@@ -37,6 +37,15 @@
 		<scales>Scales</scales>
 		<airlines>Airlines</airlines>
 		<duration>Duration</duration>
+		<advanced_search>Advanced filters</advanced_search>
+		<price_from_label>Price from</price_from_label>
+		<price_from>Choose an amount</price_from>
+		<price_to_label>Price to</price_to_label>
+		<price_to>Choose an amount</price_to>
+		<cabin_type_label>Class:</cabin_type_label>
+		<economy>Economy</economy>
+		<business>Business</business>
+		<first_class>First class</first_class>
 	</search>
 	<comments_text>
 		<airline_name_label>Airline name:</airline_name_label>
