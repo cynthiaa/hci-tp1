@@ -1,4 +1,12 @@
 $(document).ready(function() {
+	$.ajax({
+            url: "http://eiffel.itba.edu.ar/hci/service2/Geo.groovy?method=GetCities&page_size=40",
+			dataType: "jsonp",
+			jsonpCallback: "loadCities",
+    });
+});
+
+function loadCities(data){
 	qs= new QueryString()
 	var orig = qs.value('origin');
 	var orig_name = qs.value('origin_name');
@@ -10,7 +18,6 @@ $(document).ready(function() {
 	var child_num = qs.value('kids_num');
 	var infant_num = qs.value('infants_num');
 	var sort_key = "total";
-	var sort_order = "asc";
 	$("#origin").val(orig_name);
 	$("#destination").val(dest_name);
 	$("#departure_date").val(dep);
@@ -19,22 +26,43 @@ $(document).ready(function() {
 	$("#kids_num").val(child_num);
 	$("#infants_num").val(infant_num);
 	
+	var myCities = new Array();
+	var myCitiesId = new Array();
+	if(!data.hasOwnProperty("error")){
+		for (var i=0;i<data['total'];i++){
+			myCities[i] = data['cities'][i]['name'];
+			myCitiesId[i] = data['cities'][i]['cityId'];
+		}
+	}else{
+		console.log(JSON.stringify(data));
+	}
+	
 	//aca viene la llamada de ajax
-	retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, sort_order);
+	retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
+	
+	$( "#origin" ).autocomplete({
+            source: myCities
+	});
+	
+	$( "#destination" ).autocomplete({
+            source: myCities
+	});
 	
 	$("#search_flights").click(function () {	
 			if (!$("#search_form").valid()){
 				alert("Error en el formulario. Revise los elementos resaltados.");
 			}else{
 				$("#all_results").empty();
-				orig = $("#origin").val();
-				dest = $("#destination").val();
+				orig_name = $("#origin").val();
+				orig = myCitiesId[myCities.indexOf(orig_name)];
+				dest_name = $("#destination").val();
+				dest = myCitiesId[myCities.indexOf(dest_name)];
 				dep = $("#departure_date").val();
 				ret = $("#return_date").val();
 				adult_num = $("#adults_num").val();
 				child_num = $("#kids_num").val();
 				infant_num = $("#infants_num").val();
-				retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, sort_order);
+				retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
 			}
     });
 	
@@ -48,20 +76,8 @@ $(document).ready(function() {
 		}else if($("#sort_key").val() == "Escalas"){
 			sort_key = "stopovers";
 		}
-		retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, sort_order);
+		retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
 	});
-});
-
-function getQuerystring(key, default_)
-{
-  if (default_==null) default_="";
-  key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-  var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
-  var qs = regex.exec(window.location.href);
-  if(qs == null)
-    return default_;
-  else
-    return qs[1];
 }
 
 function retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, page, sort_key, sort_order){
