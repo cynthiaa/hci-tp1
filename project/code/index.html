@@ -18,8 +18,9 @@
 	<script src="js/jquery.validate.wrapper.js" type="text/javascript"/></script>
 	<script src="js/validate-search.js" type="text/javascript"/></script>
 	<script src="js/date-range.js" type="text/javascript"/></script>
+	<script src="js/auto-complete.js" type="text/javascript"/></script>
 	<script src="js/language.js" type="text/javascript"/></script>
-
+	
 
 </head>
 <body>
@@ -61,34 +62,46 @@
 						<p>
 						<div id="passengers_ages">
 						<label id="adults_selectQ" class="translate" >Adultos(11 años o más):</label>
-						<select name="adults_num">
-							<option value="1" selected="selected">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
+						<select id="adults_num" name="adults_num">
+							<option selected="selected">1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
 						</select><br>
 						<label id="kids_selectQ" class="translate">Niños (de 2 a 11 años):</label>
-						<select name="kids_num">
-							<option value="0" selected="selected">0</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
+						<select id="kids_num" name="kids_num">
+							<option selected="selected">0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
 						</select><br>
 						<label id="inf_selectQ" class="translate">Infantes (de 0 a 2 años):</label>
-						<select name="infants_num">
-							<option value="0" selected="selected">0</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
+						<select id="infants_num" name="infants_num">
+							<option selected="selected">0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
 						</select>
 						</div>
 						</p>
-						<input id="initial_search" class="translate"type="submit" value="Buscar vuelos">
+						<a id="initial_search" class="translate button">Buscar vuelos</a>
                     </form>
                 </div>
 				<div id="picture" >
