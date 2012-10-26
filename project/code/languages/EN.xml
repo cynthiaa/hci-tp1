@@ -23,6 +23,7 @@
 		<destination_label>Destination:</destination_label>
 		<destination>Destination airport</destination>
 		<depart_label>Departure:</depart_label>
+		<depart_label1>Departure</depart_label1>
 		<departure_date> Departure date</departure_date>
 		<return_label>Return:</return_label>
 		<return_date>Only for round trip</return_date>
@@ -88,6 +89,17 @@
 	<results_dinamic>
 		<price_detail>Price detail</price_detail>
 		<buy_label>Buy</buy_label>
+		<unqualified>Unqualified</unqualified>
+		<price_des>Price details</price_des>
+		<adults_price>Adults</adults_price>
+		<kids_price>Kids</kids_price>
+		<infants_price>Infants</infants_price>
+		<tax_price>Taxes</tax_price>
+		<charges_price>Charges</charges_price>
+		<back_details>back</back_details>
+		<origin_label1>Origin:</origin_label1>
+		<destination_label1>Destination:</destination_label1>
+		
 	</results_dinamic>
 	<promotions>
 		

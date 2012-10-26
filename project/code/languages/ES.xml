@@ -87,6 +87,18 @@
 	<results_dinamic>
 		<price_detail>Ver detalles</price_detail>
 		<buy_label>Comprar</buy_label>
+		<unqualified>No calificado</unqualified>
+		<price_des>Desglose de precio</price_des>
+		<adults_price>Adultos</adults_price>
+		<kids_price>Niños</kids_price>
+		<infants_price>Infantes</infants_price>
+		<tax_price>Impuestos</tax_price>
+		<charges_price>Cargas</charges_price>
+		<back_details>volver</back_details>
+		<comments1>Commentarios</comments1>
+		<comments2>Comentarios</comments2>
+		<comments3>Comentarios</comments3>
+		<comments4>Comentarios</comments4>
 	</results_dinamic>
 	<promotions>
 		
