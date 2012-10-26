@@ -172,6 +172,17 @@
 		<arrival_date_in>Arrival date</arrival_date_in>
 		<time_zone_arr_in>Time zone</time_zone_arr_in>
 		<duration_in>Duration</duration_in>
+		
+		<price_info>Price summary</price_info>
+		<adult_price>Adult price</adult_price>
+		<adult_quantity>Adults quantity</adult_quantity>
+		<kid_price>Kid price</kid_price>
+		<kid_quantity>Kids quantity</kid_quantity>
+		<infant_price>Infant price</infant_price>
+		<infant_quantity>Infants quantity</infant_quantity>
+		<charges_price1>Charge price</charges_price1>
+		<taxes_price>Taxes price</taxes_price>
+		
 	</summary>
 	<footer_text> Despejar.com© Almost all rights reserved</footer_text>
 </language>

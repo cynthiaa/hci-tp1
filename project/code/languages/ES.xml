@@ -170,6 +170,17 @@
 		<arrival_date_in>Fecha de llegada</arrival_date_in>
 		<time_zone_arr_in>Zona horaria</time_zone_arr_in>
 		<duration_in>Duración</duration_in>
+		
+		<price_info>Resumen del precio</price_info>
+		<adult_price>Precio por adulto</adult_price>
+		<adult_quantity>Cantidad de adultos</adult_quantity>
+		<kid_price>Precio por niño</kid_price>
+		<kid_quantity>Cantidad de niños</kid_quantity>
+		<infant_price>Precio por infantes</infant_price>
+		<infant_quantity>Cantidad de infantes</infant_quantity>
+		<charges_price1>Precio por cargas</charges_price1>
+		<taxes_price>Precio por impuestos</taxes_price>
+		
 	</summary>
 
 	<footer_text> Despejar.com© Casi todos los derechos reservados</footer_text>
