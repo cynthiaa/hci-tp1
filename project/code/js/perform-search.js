@@ -1,4 +1,7 @@
+// estado de la barra de busqueda avanzada
+var filters_state = false;
 $(document).ready(function() {
+	$("#filters").hide(0);
 	qs= new QueryString()
 	$("#all_results").empty();
 	$("#origin").val(qs.value('origin_name'));
@@ -78,6 +81,18 @@ function loadCities(data){
 			sort_key = "stopovers";
 		}		
 		retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
+	});
+	
+	$("#advanced_filters").click(function () {	
+		if(filters_state){
+			$("#filters").hide(500);
+			$("#advanced_filters").val("< Busqueda avanzada>");
+			filters_state = false;
+		}else{
+			$("#filters").show(500);
+			$("#advanced_filters").val("< Busqueda simple>");
+			filters_state = true;
+		}			
 	});
 }
 

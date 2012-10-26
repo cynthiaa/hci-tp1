@@ -10,13 +10,13 @@ $(function() {
             }
         });
         $( "#return_date" ).datepicker({
-            defaultDate: "+2d",
+            defaultDate: "+3d",
             changeMonth: true,
 			dateFormat: "yy-mm-dd",
             numberOfMonths: 1,
+			minDate: 3,
             onSelect: function( selectedDate ) {
                 $( "#departure_date" ).datepicker( "option", "maxDate", selectedDate );
             }
         });
-        $.datepicker.setDefaults($.datepicker.regional['es']);
     });

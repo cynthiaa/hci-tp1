@@ -93,6 +93,8 @@ h3{
 	overflow: auto;
 }
 
+
+
 .thinner{
 	width:660px;
 }
@@ -158,6 +160,7 @@ display: block
 }
 /* Posicionamiento de cajas  particulares*/
 #search {
+	font-size: 13px;
 	width: 170px;
 	float:left;
 }

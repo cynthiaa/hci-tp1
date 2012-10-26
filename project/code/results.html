@@ -83,7 +83,23 @@
 							<option>10</option>
 						</select>
 						<br>
-						<br>
+						<div id="filters">
+							<label id="price_from_label" >Precio desde:</label><br>
+							<input id="price_from" type="text" placeholder="Escoja un monto" name="price_from"><br>
+							<label id="price_to_label">Precio hasta:</label><br>
+							<input id="price_to" type="text" placeholder="Escoja un monto" name="price_to"><br>
+							<label id="min_time_label">Horario min de salida:</label><br>
+							<input id="min_time" type="text" placeholder="hh:mm" name="min_time"><br>
+							<label id="max_time_label">Horario max de salida:</label><br>
+							<input id="max_time"type="text" placeholder="hh:mm" name="max_time"><br>
+							<label id="cabin_type_label">Clase:</label><br>
+							<select name="infants_num"  id="infants_num">
+							<option value="ECONOMY">Turista</option>
+							<option value="BUSINESS">Business</option>
+							<option value="FIRST_CLASS">Primera clase</option>
+							</select><br><br>
+						</div>
+						<a id="advanced_filters">< Busqueda avanzada ></a><br><br>
 						<a id="search_flights" class="button">Buscar vuelos</a><br>
                     </form>
                 </div>

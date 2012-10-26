@@ -1,8 +1,10 @@
 $(document).ready(function() {
 	$( "#send" ).click(function() {
 		var recommend = ($("#recommend").val()=="Si")? "true":"false";
-		sendCommentQuery($("#airline").val(),$("#flight_number").val(),$("#amability").val(),$("#food").val(),$("#punctuality").val(),$("#frequent_passenger").val(),$("#comfort").val(),$("#price_quality").val(),recommend,$("#comments").val());
-    });
+		if(validate_form()){
+			sendCommentQuery($("#airline").val(),$("#flight_number").val(),$("#amability").val(),$("#food").val(),$("#punctuality").val(),$("#frequent_passenger").val(),$("#comfort").val(),$("#price_quality").val(),recommend,$("#comments").val());
+		}
+	});
 });
 
 function sendCommentQuery(airline, flight, amability, food, punctuality, frequent_passenger, comfort, price_quality, recommend, comments){
@@ -65,4 +67,22 @@ function commentSent(data){
 		success_div.fadeIn(500);	
 	}
 	return;
+}
+
+function validate_form(){
+	var airline_name = $("#airline_name").val();
+	var flight_number = $("#flight_number").val();
+	var error_string = ""
+	if(airline_name == ""){
+		error_string = error_string+"El campo de nombre de aerolinea es obligatorio.\n";
+	}
+	if(flight_number == ""){
+		error_string = error_string+"El numero de vuelo es obligatorio.\n";
+	}
+	if(error_string == ""){
+		return true;
+	}else{
+		alert(error_string);
+		return false;
+	}
 }
