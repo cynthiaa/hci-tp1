@@ -351,6 +351,7 @@ function displayFlights(flights, path){
 		$(".result").delay(400).fadeIn(600);
 		attachClickEvent();	
 	}
+	translate();
 	return;
 }
 

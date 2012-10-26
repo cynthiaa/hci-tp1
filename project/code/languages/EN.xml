@@ -90,6 +90,7 @@
 		<price_detail>Price detail</price_detail>
 		<buy_label>Buy</buy_label>
 		<unqualified>Unqualified</unqualified>
+		<price_tag1>Price</price_tag1>
 		<price_des>Price details</price_des>
 		<adults_price>Adults</adults_price>
 		<kids_price>Kids</kids_price>
@@ -98,7 +99,25 @@
 		<charges_price>Charges</charges_price>
 		<back_details>back</back_details>
 		<origin_label1>Origin:</origin_label1>
+		<origin_label2>Origin:</origin_label2>
 		<destination_label1>Destination:</destination_label1>
+		<destination_label2>Destination:</destination_label2>
+		<departure_label1>Departure</departure_label1>
+		<departure_label2>Departure</departure_label2>
+		<arrival_label1>Arrival</arrival_label1>
+		<arrival_label2>Arrival</arrival_label2>
+		<duration_label1>Duration</duration_label1>
+		<duration_label2>Duration</duration_label2>
+		<scales_label1>Scales</scales_label1>
+		<scales_label2>Scales</scales_label2>
+		<airline_label1>Airline</airline_label1>
+		<airline_label2>Airline</airline_label2>
+		<flight_label1>Flight</flight_label1>
+		<flight_label2>Flight</flight_label2>
+		<comments1>Comments</comments1>
+		<comments2>Comments</comments2>
+		<comments3>Comments</comments3>
+		<comments4>Comments</comments4>
 		
 	</results_dinamic>
 	<promotions>

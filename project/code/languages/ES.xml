@@ -88,6 +88,7 @@
 		<price_detail>Ver detalles</price_detail>
 		<buy_label>Comprar</buy_label>
 		<unqualified>No calificado</unqualified>
+		<price_tag1>Precio</price_tag1>
 		<price_des>Desglose de precio</price_des>
 		<adults_price>Adultos</adults_price>
 		<kids_price>Niños</kids_price>
@@ -95,7 +96,23 @@
 		<tax_price>Impuestos</tax_price>
 		<charges_price>Cargas</charges_price>
 		<back_details>volver</back_details>
-		<comments1>Commentarios</comments1>
+		<origin_label1>Origen:</origin_label1>
+		<origin_label2>Origen:</origin_label2>
+		<destination_label1>Destino:</destination_label1>
+		<destination_label2>Destino:</destination_label2>
+		<departure_label1>Salida</departure_label1>
+		<departure_label2>Salida</departure_label2>
+		<arrival_label1>Llegada</arrival_label1>
+		<arrival_label2>Llegada</arrival_label2>
+		<duration_label1>Duración</duration_label1>
+		<duration_label2>Duración</duration_label2>
+		<scales_label1>Escalas</scales_label1>
+		<scales_label2>Escalas</scales_label2>
+		<airline_label1>Aerolínea</airline_label1>
+		<airline_label2>Aerolínea</airline_label2>
+		<flight_label1>Vuelo</flight_label1>
+		<flight_label2>Vuelo</flight_label2>
+		<comments1>Comentarios</comments1>
 		<comments2>Comentarios</comments2>
 		<comments3>Comentarios</comments3>
 		<comments4>Comentarios</comments4>
