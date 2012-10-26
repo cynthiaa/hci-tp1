@@ -42,8 +42,8 @@ function translate(){
 	$('[class*="translate"]').each(function(){
 		var id = $(this).attr('id');
 		var code=id.replace(/.*translate_([^\s]*)[\s.*]?/,'$1');
-		if(this.nodeName.toLowerCase() == 'input' ) {
-			if($(this).attr('type') != 'submit') {
+		if(this.nodeName.toLowerCase() == 'input' || this.nodeName.toLowerCase() == 'textarea') {
+			if($(this).attr('type') != 'submit' ) {
 			   $(this).attr('placeholder',($(language).find(code).text()));
 		   }
 		   
