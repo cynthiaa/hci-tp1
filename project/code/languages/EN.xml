@@ -78,6 +78,12 @@
 		<phone>Phone:</phone>
 		<confirm_text>Confirm</confirm_text>
 	</buy_form>
+	<deals_tag>
+		<deals_text>Insert your city and look for deals!</deals_text>
+		<search_deals>Search deals</search_deals>
+	
+	
+	</deals_tag>
 	<results_dinamic>
 		<price_detail>Price detail</price_detail>
 	</results_dinamic>

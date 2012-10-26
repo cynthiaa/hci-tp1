@@ -78,6 +78,11 @@
 		<phone>Teléfono:</phone>
 		<confirm_text>Confirmar</confirm_text>
 	</buy_form>
+	<deals_tag>
+		<deals_text>Introduce el nombre de tu ciudad y busca ofertas!</deals_text>
+		<search_deals>Buscar promociones</search_deals>
+	
+	</deals_tag>
 	<results_dinamic>
 		<price_detail>Ver detalles</price_detail>
 	</results_dinamic>
