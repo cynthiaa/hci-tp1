@@ -121,10 +121,10 @@
 		<airline_label2>Aerolínea</airline_label2>
 		<flight_label1>Vuelo</flight_label1>
 		<flight_label2>Vuelo</flight_label2>
-		<comments1>Comentarios</comments1>
-		<comments2>Comentarios</comments2>
-		<comments3>Comentarios</comments3>
-		<comments4>Comentarios</comments4>
+		<comments_label1>Comentarios</comments_label1>
+		<comments_label2>Comentarios</comments_label2>
+		<comments_label3>Comentarios</comments_label3>
+		<comments_label4>Comentarios</comments_label4>
 	</results_dinamic>
 	<promotions>
 		

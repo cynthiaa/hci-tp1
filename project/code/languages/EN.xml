@@ -42,6 +42,7 @@
 		<price_from>Choose an amount</price_from>
 		<price_to_label>Price to</price_to_label>
 		<price_to>Choose an amount</price_to>
+		
 		<cabin_type_label>Class:</cabin_type_label>
 		<economy>Economy</economy>
 		<business>Business</business>
@@ -123,10 +124,10 @@
 		<airline_label2>Airline</airline_label2>
 		<flight_label1>Flight</flight_label1>
 		<flight_label2>Flight</flight_label2>
-		<comments1>Comments</comments1>
-		<comments2>Comments</comments2>
-		<comments3>Comments</comments3>
-		<comments4>Comments</comments4>
+		<comments_label1>Comments</comments_label1>
+		<comments_label2>Comments</comments_label2>
+		<comments_label3>Comments</comments_label3>
+		<comments_label4>Comments</comments_label4>
 		
 	</results_dinamic>
 	<promotions>
