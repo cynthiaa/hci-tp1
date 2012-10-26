@@ -1,5 +1,17 @@
 <language>
 	<name>English</name>
+	<errors_and_messages>
+		<form_error> Form error. Please check the highlighted fields</form_error>
+		<server_retrievel>Server retrieval has failed</server_retrievel>
+		<no_available_flights>No available flights</no_available_flights>
+		<origin_error>Wrong or missing origin</origin_error>
+		<destination_error>Wrong or missing destination</destination_error>
+		<departure_date_error>Wrong or missing departure date</departure_date_error>
+		<return_date_error>Wrong or missing return date</return_date_error>
+		<comment_failure>No se pudo enviar su comentario. Disculpe las molestias ocasionadas</comment_failure>
+		<comment_failure>Can't send your comment. Sorry for the inconvenience</comment_failure>
+		
+	</errors_and_messages>
 	<search>
 		<search_flight>Search flight</search_flight>
 		<deals>Deals</deals>
