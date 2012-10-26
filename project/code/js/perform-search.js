@@ -1,8 +1,13 @@
 $(document).ready(function() {
 	qs= new QueryString()
-	$("#origin").val(qs.value('origin_name'));
-	$("#destination").val(qs.value('destination_name'));
 	$("#all_results").empty();
+	$("#origin").val(qs.value('origin_name'));
+	$("#destination").val(qs.value('destination_name'));	
+	$("#departure_date").val(qs.value('departure_date'));
+	$("#return_date").val(qs.value('return_date'));
+	$("#adults_num").val(qs.value('adults_num'));
+	$("#kids_num").val(qs.value('kids_num'));
+	$("#infants_num").val(qs.value('infants_num'));
 	$.ajax({
             url: "http://eiffel.itba.edu.ar/hci/service2/Geo.groovy?method=GetCities&page_size=40",
 			dataType: "jsonp",
@@ -22,11 +27,7 @@ function loadCities(data){
 	var child_num = qs.value('kids_num');
 	var infant_num = qs.value('infants_num');
 	var sort_key = "total";
-	$("#departure_date").val(dep);
-	$("#return_date").val(ret);
-	$("#adults_num").val(adult_num);
-	$("#kids_num").val(child_num);
-	$("#infants_num").val(infant_num);
+
 	
 	var myCities = new Array();
 	var myCitiesId = new Array();
