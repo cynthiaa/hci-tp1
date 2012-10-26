@@ -9,10 +9,8 @@
 		<departure_date_error>El dia de partida es obligatorio</departure_date_error>
 		<return_date_error>El campo de llegada es obligatorio</return_date_error>
 		<comment_failure>No se pudo enviar su comentario. Disculpe las molestias ocasionadas</comment_failure>
-		<comment_failure>Can't send your comment. Sorry for the inconvenience</comment_failure>
 		<invalid_date_format>Formato de fecha invalida. Usar yyyy-mm-dd.</invalid_date_format>
-		<too_soon_date>Debe haber al menos 2 días de diferencia entre hoy y el vuelo</too_soon_date>
-		
+		<to_soon_date>Debe haber al menos 2 días de diferencia entre hoy y el vuelo</to_soon_date>		
 	</errors_and_messages>
 	<search>
 		<search_flight>Buscar vuelo</search_flight>

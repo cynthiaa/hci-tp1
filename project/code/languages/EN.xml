@@ -9,9 +9,8 @@
 		<departure_date_error>Wrong or missing departure date</departure_date_error>
 		<return_date_error>Wrong or missing return date</return_date_error>
 		<comment_failure>No se pudo enviar su comentario. Disculpe las molestias ocasionadas</comment_failure>
-		<invalid_date_format>Invalid date format. Use yyyy-mm-dd.</invalid_date_format>
+		<invalid_date_format>Invalid date format. Use yyyy-mm-dd</invalid_date_format>
 		<to_soon_date>There must be at least 2 days since now</to_soon_date>
-		
 	</errors_and_messages>
 	<search>
 		<search_flight>Search flight</search_flight>
