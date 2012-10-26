@@ -41,7 +41,7 @@
 		<frequent_passenger_label>Frequent passenger program: </frequent_passenger_label>
 		<confort_label>Confort</confort_label>
 		<price_quality_label>Price/Quality ratio:</price_quality_label>
-		<recommend_label>You'd recommend it?</recommend_label>
+		<recommend_label>You'd recommend</recommend_label>
 		<comments_label>Other comments</comments_label>
 		<comments>Tell your experience</comments>
 		<send>Send comment</send>
