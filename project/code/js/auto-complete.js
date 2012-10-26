@@ -46,13 +46,13 @@ function fillCitiesArray(data){
 function valid_search(orig, dest, dep, ret){
 		var error_string = "";
 		if(orig == "")
-			error_string = error_string+"El lugar de origen es obligatorio.\n";
+			error_string = error_string+ translateElem("origin_error")+".\n";
 		if(dest == "")
-			error_string = error_string+"El lugar de destino es obligatorio.\n";
+			error_string = error_string+translateElem("destination_error")+".\n";
 		if(dep == "" || !checkdate(dep))
-			error_string = error_string+"El dia de partida es obligatorio.\n";
+			error_string = error_string+translateElem("departure_date_error")+".\n";
 		if(ret != "" && !checkdate(ret))
-			error_string = error_string+"El campo de llegada es obligatorio.\n";
+			error_string = error_string+translateElem("return_date_error")+".\n";
 		if(error_string != ""){
 			alert(error_string);
 			error_string = "";

@@ -87,11 +87,11 @@ function valid_search(orig, dest, dep, ret){
 		if(orig == "")
 			error_string = error_string+ translateElem("origin_error")+".\n";
 		if(dest == "")
-			error_string = error_string+translateElem("destination_error")+.\n";
+			error_string = error_string+translateElem("destination_error")+".\n";
 		if(dep == "" || !checkdate(dep))
-			error_string = error_string+translateElem("departure_date_error")+.\n";
+			error_string = error_string+translateElem("departure_date_error")+".\n";
 		if(ret != "" && !checkdate(ret))
-			error_string = error_string+translateElem("return_date_error")+.\n";
+			error_string = error_string+translateElem("return_date_error")+".\n";
 		if(error_string != ""){
 			alert(error_string);
 			error_string = "";

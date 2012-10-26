@@ -72,7 +72,6 @@ function translate(){
 }
 
 function translateElem(idElem) {
-	alert(language);
 	if(language == null){
 		loadLanguage(getCookie("lang"));
 	}
