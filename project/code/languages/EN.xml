@@ -71,8 +71,6 @@
 		<email>E-mail address:</email>
 		<phone>Phone:</phone>
 		<confirm_text>Confirm</confirm_text>
-		
-	
 	</buy_form>
 	<results_dinamic>
 		<price_detail>Price detail</price_detail>
