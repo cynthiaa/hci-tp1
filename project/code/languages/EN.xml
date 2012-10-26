@@ -46,12 +46,34 @@
 		<comments>Tell your experience</comments>
 		<send>Send comment</send>
 		<yes>Yes</yes>
-		<leave_comment>&lt;Leave comment&gt;</leave_comment>
-		
-		
-		
-		
+		<leave_comment>&lt;Leave comment&gt;</leave_comment>	
 	</comments_text>
+	<buy_form>
+		<passenger_title>Passenger</passenger_title>
+		<name>Name:</name>
+		<lastname>Lastname:</lastname>
+		<birth>Date of birth:</birth>
+		<credit_card>Credit card:</credit_card>
+		<credit_card_number>Number:</credit_card_number>
+		<expiration_date>Expiration date:</expiration_date>
+		<security_code>Security code:</security_code>
+		<owner_name> Titular name: </owner_name>
+		<owner_lastname>Titular lastname: </owner_lastname>
+		<billing>Billing</billing>
+		<country>Country:</country>
+		<state>State:</state>
+		<city>City:</city>
+		<postal_code>Postal code:</postal_code>
+		<address> Address:</address>
+		<floor> Floor:</floor>
+		<apartment>Apartment:</apartment>
+		<contact_info>Contact information</contact_info>
+		<email>E-mail address:</email>
+		<phone>Phone:</phone>
+		<confirm_text>Confirm</confirm_text>
+		
+	
+	</buy_form>
 	<results_dinamic>
 		<price_detail>Price detail</price_detail>
 	</results_dinamic>

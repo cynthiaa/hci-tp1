@@ -36,6 +36,30 @@
 		<yes>Si</yes>
 		<leave_comment>&lt;Dejar comentario&gt;</leave_comment>
 	</comments_text>
+	<buy_form>
+		<passenger_title>Pasajero</passenger_title>
+		<name>Nombre:</name>
+		<lastname>Apellido:</lastname>
+		<birth>Fecha de nacimiento:</birth>
+		<credit_card>Tarjeta de crédito:</credit_card>
+		<credit_card_number>Número:</credit_card_number>
+		<expiration_date>Fecha de vencimiento:</expiration_date>
+		<security_code>Código de seguridad:</security_code>
+		<owner_name> Nombre del titular: </owner_name>
+		<owner_lastname>Apellido del titular: </owner_lastname>
+		<billing>Facturación</billing>
+		<country>País:</country>
+		<state>Provincia:</state>
+		<city>Ciudad:</city>
+		<postal_code>Código postal:</postal_code>
+		<address> Dirección:</address>
+		<floor> Piso:</floor>
+		<apartment>Departamento:</apartment>
+		<contact_info>Información de contacto</contact_info>
+		<email>Dirección de E-mail:</email>
+		<phone>Teléfono:</phone>
+		<confirm_text>Confirmar</confirm_text>
+	</buy_form>
 	<results_dinamic>
 		<price_detail>Ver detalles</price_detail>
 	</results_dinamic>

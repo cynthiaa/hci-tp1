@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+	<meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Despejar.com El mejor precio para tu viaje</title>
 	
@@ -9,6 +10,7 @@
 	<link href="css/cupertino/jquery-ui-1.9.0.custom.css" rel="stylesheet">
 	
     <script src="js/jquery-1.8.2.js" type="text/javascript"/></script>
+    <script src="js/language.js" type="text/javascript"/></script>
 	<script src="js/jquery-ui-1.9.0.custom.js" type="text/javascript"/></script>
 	<script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"/></script>
 	<script src="js/jquery.validate.js" type="text/javascript"/></script>
@@ -17,9 +19,9 @@
 <body>
         <div id="wrap" >
             <div id="header">
-                <select name="selCombo" size=1 onChange="javascript:alert('Aún no disponible');"> 
-                    <option value="link pagina 1">Español</option>>
-                    <option value="link pagina 2">Inglés</option> 
+                 <select id="languageSelector" name="selCombo" size=1"> 
+                    <option value="ES">Español</option>
+                    <option value="EN">English</option> 
                 </select> 
             </div>
 	        <div id="logo" >
@@ -29,13 +31,13 @@
 			<form id=passengers_form">
 			<div id="passengers_container">			
 				<div class="inner_box passenger_div">				
-					<h3 id="passenger_title">Pasajero</h3>	
+					<h3 id="passenger_title" class="translate">Pasajero</h3>	
 					<div class="input_div">					
-						<label>Nombre:</label>
+						<label id="name" class="translate" >Nombre:</label>
 						<input type="text" name="name" id="name"><br>
-						<label>Apellido:</label>
+						<label id="lastname" class="translate" >Apellido:</label>
 						<input type="text" name="surname" id="surname"><br>
-						<label>Fecha de nacimiento:</label>
+						<label id="birth" class="translate">Fecha de nacimiento:</label>
 						<input type="text" name="date_birth" id="date_birth"><br>
 						<label>DNI:</label>
 						<input type="text" name="documento" id="documento"><br>
@@ -44,56 +46,56 @@
 				</div>
 				</div>				
 				<div class="inner_box">
-					<h3>Tarjeta de crédito</h3>				
+					<h3 id="credit_card" class="translate">Tarjeta de crédito</h3>				
 						<div class="input_div">
-						<label>Número:</label>
+						<label id="credit_card_number" class="translate" >Número:</label>
 						<input type="text" name="creditcard_number" id="creditcard_number"><br>
-						<label>Fecha de vencimiento:</label>
+						<label id="expiration_date" class="translate">Fecha de vencimiento:</label>
 						<input type="text" name="creditcard_expire" id="creditcard_expire"><br>
-						<label>Código de seguridad:</label>
+						<label id="security_code" class="translate" >Código de seguridad:</label>
 						<input type="text" name="creditcard_security_code" id="creditcard_security_code"><br>
-						<label>Nombre del titular:</label>
+						<label id="owner_name" class="translate">Nombre del titular:</label>
 						<input type="text" name="creditcard_firstname" id="creditcard_firstname"><br>
-						<label>Apellido del titular:</label>
+						<label id="owner_lastname" class="translate">Apellido del titular:</label>
 						<input type="text" name="creditcard_lastname" id="creditcard_lastname"><br>
 						</div>
 				</div>
 				<br>
 				<div class="inner_box">
-					<h3>Facturacion</h3>	
+					<h3 id="billing" class="translate">Facturacion</h3>	
 						<div class="input_div">
-						<label>Pais:</label>
+						<label id="country" class="translate" >Pais:</label>
 						<input type="text" name="country" id="country"><br>
-						<label>Provincia:</label>
+						<label id="state" class="translate">Provincia:</label>
 						<input type="text" name="state" id="state"><br>
-						<label>Ciudad:</label>
+						<label id="city" class="translate" >Ciudad:</label>
 						<input type="text" name="city" id="city"><br>
-						<label>Código postal:</label>
+						<label id="postal_code" class="translate" >Código postal:</label>
 						<input type="text" name="postalcode" id="postalcode"><br>
-						<label>Dirección:</label>
+						<label id="address" class="translate" >Dirección:</label>
 						<input type="text" name="address" id="address"><br>
-						<label>Piso:</label>
+						<label id="floor" class="translate" >Piso:</label>
 						<input type="text" name="floor" id="floor"><br>
-						<label>Departamento:</label>
+						<label id="apartment" class="translate">Departamento:</label>
 						<input type="text" name="apartment" id="apartment"><br>
 						</div>
 				</div>
 				<br>
 				<div class="inner_box">
-					<h3>Información de contacto</h3>
+					<h3 id="contact_info" class="translate" >Información de contacto</h3>
 						<div class="input_div">
-						<label>Dirección de e-mail:</label>
+						<label id="email" class="translate" >Dirección de e-mail:</label>
 						<input type="text" name="mail" id="mail"><br>
-						<label>Telefono:</label>
+						<label id="phone" class="translate" >Telefono:</label>
 						<input type="text" name="telephone" id="telephone"><br>
 						</div>
 					<br>			
-					<a class="button" id="confirm">Confirmar</a>
+					<a class="button" id="confirm"><span id="confirm_text" class="translate">Confirmar</span></a>
                 </div>
 			</form>				
             </div>
 			<div id="footer">
-                    <h5>Despejar.com© Casi todos los derechos reservados</h5>
+                    <h5 id="footer_text" class="translate">Despejar.com© Casi todos los derechos reservados</h5>
             </div>
         </div>
 </body>
