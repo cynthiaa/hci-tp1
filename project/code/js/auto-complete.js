@@ -65,7 +65,7 @@ function valid_search(orig, dest, dep, ret){
 function checkdate(input){
 	var validformat=/^\d{4}\-\d{2}\-\d{2}$/; //Basic check for format validity
 	if (!validformat.test(input))
-		alert("Formato de fecha invalida. Usar yyyy-mm-dd.")
+		alert(translateElem("invalid_date_format"));
 	else{ //Detailed check for valid date ranges
 		var monthfield=input.split("-")[1];
 		var dayfield=input.split("-")[2];
@@ -73,7 +73,7 @@ function checkdate(input){
 		var dayobj = new Date(yearfield, monthfield-1, dayfield);
 		var currentDay = new Date();
 		if(dayobj-currentDay<172800000){
-			alert("Debe haber al menos 2 días de diferencia entre hoy y el vuelo"); 
+			alert(translateElem("to_soon_date")); 
 			return false;
 		}
 		if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
