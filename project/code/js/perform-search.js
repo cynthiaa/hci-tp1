@@ -52,7 +52,6 @@ function loadCities(data){
 	});
 	
 	$("#search_flights").click(function () {	
-		alert("ASD"+translateElem("origin_error"));	
 		orig_name = $("#origin").val();
 		orig = myCitiesId[myCities.indexOf(orig_name)];
 		dest_name = $("#destination").val();

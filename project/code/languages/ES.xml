@@ -29,6 +29,7 @@
 		<kids_selectQ>Niños	(de 2 a 11 años) </kids_selectQ>
 		<inf_selectQ>Infantes (de 0 a 2 años) </inf_selectQ>
 		<initial_search>Buscar! </initial_search>
+		<sort_by>Ordenar por</sort_by>
 	</search>
 	<comments_text>
 		<airline_name_label>Nombre de aerolínea</airline_name_label>
