@@ -136,5 +136,41 @@
 		
 	
 	</about>
+	<summary>
+		<outbound_title>Resumen de vuelo: Ida</outbound_title>
+		<origin_country_out>País de partida</origin_country_out>
+		<origin_city_out>Ciudad de partida</origin_city_out>
+		<origin_airport_out>Aeropuerto</origin_airport_out>
+		<destination_country_out>País de llegada</destination_country_out>
+		<destination_city_out>Ciudad de llegada</destination_city_out>
+		<destination_airport_out>Aeropuerto</destination_airport_out>
+		<airline_out>Aerolínea</airline_out>
+		<flight_number_out>Número de vuelo</flight_number_out>
+		<calification_out>Calificación</calification_out>
+		<depart_date_out>Fecha de partida</depart_date_out>
+		<time_zone_dep_out>Zona horaria</time_zone_dep_out>
+		<category_out>Categoría</category_out>
+		<arrival_date_out>Fecha de llegada</arrival_date_out>
+		<time_zone_arr_out>Zona horaria</time_zone_arr_out>
+		<duration_out>Duración</duration_out>
+		
+		<inbound_title>Resumen de vuelo: </inbound_title>
+		<origin_country_in>País de partida</origin_country_in>
+		<origin_city_in>Ciudad de partida</origin_city_in>
+		<origin_airport_in>Aeropuerto</origin_airport_in>
+		<destination_country_in>País de llegada</destination_country_in>
+		<destination_city_in>Ciudad de llegada</destination_city_in>
+		<destination_airport_in>Aeropuerto</destination_airport_in>
+		<airline_in>Aerolínea</airline_in>
+		<flight_number_in>Número de vuelo</flight_number_in>
+		<calification_in>Calificación</calification_in>
+		<depart_date_in>Fecha de partida</depart_date_in>
+		<time_zone_dep_in>Zona horaria</time_zone_dep_in>
+		<category_in>Categoría</category_in>
+		<arrival_date_in>Fecha de llegada</arrival_date_in>
+		<time_zone_arr_in>Zona horaria</time_zone_arr_in>
+		<duration_in>Duración</duration_in>
+	</summary>
+
 	<footer_text> Despejar.com© Casi todos los derechos reservados</footer_text>
 </language>

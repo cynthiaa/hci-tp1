@@ -138,5 +138,40 @@
 		<about_us_title>About us</about_us_title>
 		<about_us>We are just cool people</about_us>	
 	</about>
+	<summary>
+		<outbound_title>Flight resume: Outbound</outbound_title>
+		<origin_country_out>Origin country</origin_country_out>
+		<origin_city_out>Origin city</origin_city_out>
+		<origin_airport_out>Airport</origin_airport_out>
+		<destination_country_out>Target country</destination_country_out>
+		<destination_city_out>Target city</destination_city_out>
+		<destination_airport_out>Airport</destination_airport_out>
+		<airline_out>Airline</airline_out>
+		<flight_number_out>Flight number</flight_number_out>
+		<calification_out>Calification</calification_out>
+		<depart_date_out>Depart date</depart_date_out>
+		<time_zone_dep_out>Time zone</time_zone_dep_out>
+		<category_out>Category</category_out>
+		<arrival_date_out>Arrival date</arrival_date_out>
+		<time_zone_arr_out>Time zone</time_zone_arr_out>
+		<duration_out>Duration</duration_out>
+		
+		<inbound_title>Flight resume: Outbound</inbound_title>
+		<origin_country_in>Origin country</origin_country_in>
+		<origin_city_in>Origin city</origin_city_in>
+		<origin_airport_in>Airport</origin_airport_in>
+		<destination_country_in>Target country</destination_country_in>
+		<destination_city_in>Target city</destination_city_in>
+		<destination_airport_in>Airport</destination_airport_in>
+		<airline_in>Airline</airline_in>
+		<flight_number_in>Flight number</flight_number_in>
+		<calification_in>Calification</calification_in>
+		<depart_date_in>Depart date</depart_date_in>
+		<time_zone_dep_in>Time zone</time_zone_dep_in>
+		<category_in>Category</category_in>
+		<arrival_date_in>Arrival date</arrival_date_in>
+		<time_zone_arr_in>Time zone</time_zone_arr_in>
+		<duration_in>Duration</duration_in>
+	</summary>
 	<footer_text> Despejar.com© Almost all rights reserved</footer_text>
 </language>

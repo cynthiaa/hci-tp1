@@ -8,17 +8,17 @@
     <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/> 
 	<link href="css/cupertino/jquery-ui-1.9.0.custom.css" rel="stylesheet">
 	
-    <script src="js/jquery-1.8.2.js" type="text/javascript"/></script>
-    <script src="js/language.js" type="text/javascript"/></script>
+    <script src="js/jquery-1.8.2.js" type="text/javascript"></script>
+    <script src="js/language.js" type="text/javascript"></script>
 	<script src="js/jquery-ui-1.9.0.custom.js" type="text/javascript"/></script>
-	<script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"/></script>
-	<script src="js/jquery.validate.js" type="text/javascript"/></script>
-	<script src="js/view-summary.js" type="text/javascript"/></script>
+	<script src="js/jquery-ui-1.9.0.custom.min.js" type="text/javascript"></script>
+	<script src="js/jquery.validate.js" type="text/javascript"></script>
+	<script src="js/view-summary.js" type="text/javascript"></script>
 </head>
 <body>
         <div id="wrap" >
             <div id="header">
-				<select id="languageSelector" name="selCombo" size=1"> 
+				<select id="languageSelector" name="selCombo" size=1> 
                     <option value="ES">Español</option>
                     <option value="EN">English</option> 
 				</select> 
@@ -29,12 +29,12 @@
             <div class="container thinner">
 				<div id="complete_summary">
                 <div id="outbound_box" class="inner_box">
-				<h3 id="outbound_title">Resumen del vuelo: ida</h3>
+				<h3 id="outbound_title" class="translate">Resumen del vuelo: ida</h3>
 					<table id="outbound_table">
 						<tr> 
-							<th>Pais de partida</th>
-							<th>Ciudad de partida</th>
-							<th>Aeropuerto</th>
+							<th><span id="origin_country_out" class="translate">País de partida</span></th>
+							<th><span id="origin_city_out" class="translate">Ciudad de partida</span></th>
+							<th><span id="origin_airport_out" clas="translate">Aeropuerto</span></th>
 						</tr>
 						<tr> 
 							<td id="outbound_departure_country">Argentina</td>
@@ -42,9 +42,9 @@
 							<td id="outbound_departure_airport">Ezeiza</td>
 						</tr>
 						<tr> 
-							<th>Pais de llegada</th>
-							<th>Ciudad de llegada</th>
-							<th>Aeropuerto</th>
+							<th><span id="destination_country_out" class="translate">Pais de llegada</span></th>
+							<th><span id="destination_city_out">Ciudad de llegada</span></th>
+							<th><span id="destination_airport_out" clas="translate">Aeropuerto</span></th>
 						</tr>
 						<tr> 
 							<td id="outbound_arrival_country">Argentina</td>
@@ -52,9 +52,9 @@
 							<td id="outbound_arrival_airport">Ezeiza</td>
 						</tr>
 						<tr> 
-							<th>Aerolinea</th>
-							<th>Número de vuelo</th>
-							<th>Calificacion</th>
+							<th><span id="airline_out" class="translate">Aerolinea</span></th>
+							<th><span id="flight_number_out" class="translate">Número de vuelo</span></th>
+							<th><span id="calification_out" class="translate">Calificacion</span></th>
 						</tr>
 						<tr> 
 							<td id="outbound_airline_name">Lan</td>
@@ -62,9 +62,9 @@
 							<td id="outbound_airline_rating">Turista</td>
 						</tr>
 						<tr> 
-							<th>Fecha de partida</th>
-							<th>Zona horaria</th>
-							<th>Categoria</th>
+							<th><span id="depart_date_out" class="translate">Fecha de partida</span></th>
+							<th><span id="time_zone_dep_out" class="translate">Zona horaria</span></th>
+							<th><span id="category_out" class="translate">Categoria</span></th>
 							
 						</tr>
 						<tr>
@@ -73,9 +73,9 @@
 							<td id="outbound_cabin_type">23:00</td>
 						</tr>
 						<tr> 
-							<th>Fecha de llegada</th>
-							<th>Zona horaria</th>
-							<th>Duracion</th>
+							<th><span id="arrival_date_out" class="translate">Fecha de llegada</span></th>
+							<th><span id="time_zone_arr_out" class="translate">Zona horaria</span></th>
+							<th><span id="duration_out" class="translate"> Duracion</span></th>
 							
 						</tr>
 						<tr>
@@ -87,12 +87,12 @@
 					</div>
 					<br>
 				<div id="inbound_box" class="inner_box">
-					<h3>Resumen del vuelo: vuelta</h3>
+					<h3 id="inbound_title" class="translate">Resumen del vuelo: ida</h3>
 					<table id="inbound_table">
 						<tr> 
-							<th>Pais de partida</th>
-							<th>Ciudad de partida</th>
-							<th>Aeropuerto</th>
+							<th><span id="origin_country_in" class="translate">País de partida</span></th>
+							<th><span id="origin_city_in" class="translate">Ciudad de partida</span></th>
+							<th><span id="origin_airport_in" clas="translate">Aeropuerto</span></th>
 						</tr>
 						<tr> 
 							<td id="inbound_departure_country">Argentina</td>
@@ -100,9 +100,9 @@
 							<td id="inbound_departure_airport">Ezeiza</td>
 						</tr>
 						<tr> 
-							<th>Pais de llegada</th>
-							<th>Ciudad de llegada</th>
-							<th>Aeropuerto</th>
+							<th><span id="destination_country_in" class="translate">Pais de llegada</span></th>
+							<th><span id="destination_city_in">Ciudad de llegada</span></th>
+							<th><span id="destination_airport_in" clas="translate">Aeropuerto</span></th>
 						</tr>
 						<tr> 
 							<td id="inbound_arrival_country">Argentina</td>
@@ -110,9 +110,9 @@
 							<td id="inbound_arrival_airport">Ezeiza</td>
 						</tr>
 						<tr> 
-							<th>Aerolinea</th>
-							<th>Número de vuelo</th>
-							<th>Calificacion</th>
+							<th><span id="airline_in" class="translate">Aerolinea</span></th>
+							<th><span id="flight_number_in" class="translate">Número de vuelo</span></th>
+							<th><span id="calification_in" class="translate">Calificacion</span></th>
 						</tr>
 						<tr> 
 							<td id="inbound_airline_name">Lan</td>
@@ -120,9 +120,9 @@
 							<td id="inbound_airline_rating">Turista</td>
 						</tr>
 						<tr> 
-							<th>Fecha de partida</th>
-							<th>Zona horaria</th>
-							<th>Categoria</th>
+							<th><span id="depart_date_in" class="translate">Fecha de partida</span></th>
+							<th><span id="time_zone_dep_in" class="translate">Zona horaria</span></th>
+							<th><span id="category_in" class="translate">Categoria</span></th>
 							
 						</tr>
 						<tr>
@@ -131,9 +131,9 @@
 							<td id="inbound_cabin_type">23:00</td>
 						</tr>
 						<tr> 
-							<th>Fecha de llegada</th>
-							<th>Zona horaria</th>
-							<th>Duracion</th>
+							<th><span id="arrival_date_in" class="translate">Fecha de llegada</span></th>
+							<th><span id="time_zone_arr_in" class="translate">Zona horaria</span></th>
+							<th><span id="duration_in" class="translate"> Duracion</span></th>
 							
 						</tr>
 						<tr>
