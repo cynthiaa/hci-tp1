@@ -51,23 +51,21 @@ function loadCities(data){
             source: myCities
 	});
 	
-	$("#search_flights").click(function () {	
-			if (!$("#search_form").valid()){
-				alert("Error en el formulario. Revise los elementos resaltados.");
-			}else{
-				$("#all_results").empty();
-				orig_name = $("#origin").val();
-				orig = myCitiesId[myCities.indexOf(orig_name)];
-				dest_name = $("#destination").val();
-				dest = myCitiesId[myCities.indexOf(dest_name)];
-				dep = $("#departure_date").val();
-				ret = $("#return_date").val();
-				adult_num = $("#adults_num").val();
-				child_num = $("#kids_num").val();
-				infant_num = $("#infants_num").val();
-				retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
-			}
-    });
+	$("#search_flights").click(function () {		
+		orig_name = $("#origin").val();
+		orig = myCitiesId[myCities.indexOf(orig_name)];
+		dest_name = $("#destination").val();
+		dest = myCitiesId[myCities.indexOf(dest_name)];
+		dep = $("#departure_date").val();
+		ret = $("#return_date").val();
+		adult_num = $("#adults_num").val();
+		child_num = $("#kids_num").val();
+		infant_num = $("#infants_num").val();
+		if(valid_search(orig_name, dest_name, dep, ret)){
+			$("#all_results").empty();
+			retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
+		}				
+	});
 	
 	$("#sort_key").change(function(){
 		if($("#sort_key").val() == "Precio"){
@@ -78,9 +76,44 @@ function loadCities(data){
 			sort_key = "duration";
 		}else if($("#sort_key").val() == "Escalas"){
 			sort_key = "stopovers";
-		}
+		}		
 		retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, 1, sort_key, "asc");
 	});
+}
+
+function valid_search(orig, dest, dep, ret){
+		var error_string = "";
+		if(orig == "")
+			error_string = error_string+"El lugar de origen es obligatorio.\n";
+		if(dest == "")
+			error_string = error_string+"El lugar de destino es obligatorio.\n";
+		if(dep == "" || !checkdate(dep))
+			error_string = error_string+"El dia de partida es obligatorio.\n";
+		if(ret != "" && !checkdate(ret))
+			error_string = error_string+"El campo de llegada es obligatorio.\n";
+		if(error_string != ""){
+			alert(error_string);
+			error_string = "";
+			return false;
+		}else{
+			return true;
+		}
+}
+
+function checkdate(input){
+	var validformat=/^\d{4}\-\d{2}\-\d{2}$/; //Basic check for format validity
+	if (!validformat.test(input))
+		alert("Invalid Date Format. Please correct and submit again.")
+	else{ //Detailed check for valid date ranges
+		var monthfield=input.split("-")[1];
+		var dayfield=input.split("-")[2];
+		var yearfield=input.split("-")[0];
+		var dayobj = new Date(yearfield, monthfield-1, dayfield);
+		if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
+			return false;
+		else
+			return true;
+	}
 }
 
 function retrieveFlights(orig, dest, dep, ret, adult_num, child_num, infant_num, page, sort_key, sort_order){
@@ -144,6 +177,7 @@ function displayFlights(flights, path){
 		var total_flights = 0;
 		for(var i=0;i<flights.total;i++){
 			// todos tienen ida no importa si es de ida y vuelta
+			console.log(JSON.stringify(flights));
 			if(flights['flights'][i].hasOwnProperty('outboundRoutes')){
 				// flight price information
 				var adult_price = (flights['flights'][i]['price']['adults'] == null) ? "-": flights['flights'][i]['price']['adults']['baseFare']+" "+flights['currencyId'];
