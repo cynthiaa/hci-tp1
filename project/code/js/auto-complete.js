@@ -1,6 +1,6 @@
 $(document).ready(function() {	
 		$.ajax({
-            url: "http://eiffel.itba.edu.ar/hci/service2/Geo.groovy?method=GetCities&page_size=500",
+            url: "http://eiffel.itba.edu.ar/hci/service2/Geo.groovy?method=GetCities&page_size=100",
 			dataType: "jsonp",
 			jsonpCallback: "fillCitiesArray",
         });
@@ -12,7 +12,6 @@ $(document).ready(function() {
 function fillCitiesArray(data){
 	var myCities = new Array();
 	var myCitiesId = new Array();
-	alert(data['total']);
 	if(!data.hasOwnProperty("error")){
 		for (var i=0;i<data['total'];i++){
 			myCities[i] = data['cities'][i]['name'];
