@@ -26,10 +26,15 @@
 		<return_label>Return:</return_label>
 		<return_date>Only for round trip</return_date>
 		<adults_selectQ>Adults (11 years or more) </adults_selectQ>
-		<kids_selectQ>Kids	(from 2 to 11 years) </kids_selectQ>
-		<inf_selectQ>Infants (from 0 to 2 years) </inf_selectQ>
+		<kids_selectQ>Kids	(2 to 11 years) </kids_selectQ>
+		<inf_selectQ>Infants (0 to 2 years) </inf_selectQ>
 		<initial_search>Search! </initial_search>
 		<sort_by>Sort by</sort_by>
+		<search_button>Search</search_button>
+		<price_tag>Price</price_tag>
+		<scales>Scales</scales>
+		<airlines>Airlines</airlines>
+		<duration>Duration</duration>
 	</search>
 	<comments_text>
 		<airline_name_label>Airline name:</airline_name_label>

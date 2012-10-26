@@ -26,10 +26,15 @@
 		<return_label>Regreso:</return_label>
 		<return_date>Sólo para ida y vuelta</return_date>
 		<adults_selectQ>Adultos (11 años o más) </adults_selectQ>
-		<kids_selectQ>Niños	(de 2 a 11 años) </kids_selectQ>
-		<inf_selectQ>Infantes (de 0 a 2 años) </inf_selectQ>
+		<kids_selectQ>Niños	(2 a 11 años) </kids_selectQ>
+		<inf_selectQ>Infantes (0 a 2 años) </inf_selectQ>
 		<initial_search>Buscar! </initial_search>
 		<sort_by>Ordenar por</sort_by>
+		<search_button>Buscar</search_button>
+		<price_tag>Precio</price_tag>
+		<scales>Escalas</scales>
+		<airlines>Aerolíneas</airlines>
+		<duration>Duración</duration>
 	</search>
 	<comments_text>
 		<airline_name_label>Nombre de aerolínea</airline_name_label>
