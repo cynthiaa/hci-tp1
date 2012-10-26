@@ -173,7 +173,7 @@ function displayFlights(flights, path){
 	var loadDiv = $("#all_results").children("#loading");
 	loadDiv.delay(800).hide(800);
 	if(flights.hasOwnProperty("error")){
-		$("#all_results").append("<br><div id='search_error'><h3>Error "+flights.error.code+": "+flights.error.message+"</h3></div>");
+		$("#all_results").append("<br><div id='search_error'><h3>Error "+translateElem("e"+flights.error.code)+": "+flights.error.message+"</h3></div>");
 		var errorDiv = $("#all_results").children("#search_error");
 		errorDiv.hide(0).delay(1000);
 		errorDiv.fadeIn(500);

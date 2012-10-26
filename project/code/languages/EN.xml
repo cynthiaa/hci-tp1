@@ -11,6 +11,7 @@
 		<comment_failure>No se pudo enviar su comentario. Disculpe las molestias ocasionadas</comment_failure>
 		<invalid_date_format>Invalid date format. Use yyyy-mm-dd</invalid_date_format>
 		<to_soon_date>There must be at least 2 days since now</to_soon_date>
+		<e118>Invalid departure date</e118>
 	</errors_and_messages>
 	<search>
 		<search_flight>Search flight</search_flight>

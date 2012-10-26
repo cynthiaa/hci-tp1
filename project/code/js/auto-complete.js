@@ -73,7 +73,7 @@ function checkdate(input){
 		var dayobj = new Date(yearfield, monthfield-1, dayfield);
 		var currentDay = new Date();
 		if(dayobj-currentDay<172800000){
-			alert(translateElem("to_soon_date")); 
+			alert(translateElem("to_soon_date"));
 			return false;
 		}
 		if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
