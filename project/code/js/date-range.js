@@ -4,7 +4,7 @@ $(function() {
             changeMonth: true,
 			dateFormat: "yy-mm-dd",
             numberOfMonths: 1,
-			minDate: 2,
+			minDate: 3,
             onSelect: function( selectedDate ) {
                 $( "#return_date" ).datepicker( "option", "minDate", selectedDate );
             }

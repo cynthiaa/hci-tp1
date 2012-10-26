@@ -71,6 +71,11 @@ function checkdate(input){
 		var dayfield=input.split("-")[2];
 		var yearfield=input.split("-")[0];
 		var dayobj = new Date(yearfield, monthfield-1, dayfield);
+		var currentDay = new Date();
+		if(dayobj-currentDay<172800000){
+			alert("Debe haber al menos 2 días de diferencia entre hoy y el vuelo"); 
+			return false;
+		}
 		if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
 			return false;
 		else
