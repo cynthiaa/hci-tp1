@@ -34,6 +34,7 @@
 		<comments>Contanos tu experiencia</comments>
 		<send>Enviar comentario</send>
 		<yes>Si</yes>
+		<leave_comment>&lt;Dejar comentario&gt;</leave_comment>
 	</comments_text>
 	<results_dinamic>
 		<price_detail>Ver detalles</price_detail>
